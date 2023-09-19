@@ -180,3 +180,67 @@ Here's a line-by-line breakdown of the code:
     - `prev = current` - 将'prev'指针移动到下一个节点: \(O(1)\)
 
 正如你看到的，循环内的所有操作都是 \(O(1)\)，循环进行 \(O(N)\) 次迭代。因此，总的复杂性是 \(O(N)\)。
+
+
+## Recursive version of the `swap_every_two` function. 
+
+Here's a recursive implementation based on the given code:
+
+```python
+class Node:
+    def __init__(self, value, next=None):
+        self.value = value
+        self.next = next
+
+    def __repr__(self):
+        return f"{self.value}, ({self.next.__repr__()})"
+
+def swap_every_two(node):
+    # Base case: If the node is None or next node is None, just return the node.
+    if not node or not node.next:
+        return node
+
+    # Nodes to be swapped.
+    first = node
+    second = node.next
+
+    # Swap the nodes.
+    first.next = swap_every_two(second.next)
+    second.next = first
+
+    # Now, the head is the second node.
+    return second
+
+llist = Node(1, Node(2, Node(3, Node(4, Node(5)))))
+print(swap_every_two(llist))
+```
+
+Here's a breakdown of how the recursive function works:
+
+1. If the current node (`node`) is `None` or the next node is `None`, just return the `node`. This is the base case for the recursive function and handles the cases where the linked list has an odd length or we have reached the end of the list.
+
+2. Swap the current node with the next node.
+
+3. Recursively call the `swap_every_two` function for the node after the next node (`second.next`). This is because we've already handled the current node and the next node.
+
+4. Update the next pointer of the `second` node to point to the `first` node to complete the swap.
+
+5. Return the `second` node as it's now the head of the modified sublist.
+
+The function continues to process and swap pairs of nodes recursively until it reaches the end of the list.
+
+The recursive approach to swap pairs of nodes in a linked list traverses the list once, visiting each node exactly once.
+
+Let's analyze the time complexity:
+
+For every recursive call to `swap_every_two`:
+1. There's a constant amount of work done, which includes swapping the nodes and adjusting the pointers. This work is \(O(1)\).
+2. The recursive function is called once for every pair of nodes. Since there are \(N\) nodes, there will be roughly \(N/2\) recursive calls.
+
+Combining these, the overall time complexity for the recursive function is:
+
+\[O(1) \times \frac{N}{2} = O(N)\]
+
+So, the time complexity of the recursive approach to swap every two nodes in the linked list is \(O(N)\), where \(N\) is the number of nodes in the list. This is linear with respect to the size of the list, similar to the iterative approach.
+
+
