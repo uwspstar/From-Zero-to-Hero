@@ -71,3 +71,112 @@ This code will print:
 
 2, (1, (4, (3, (5, (None)))))
 ```
+- The given code performs swaps on adjacent nodes in a linked list. Let's analyze its time complexity step by step.
+
+1. **Setting Up Pointers and Checks**:
+    ```python
+    if not llist or not llist.next:
+        return llist
+
+    dummy = Node(-1)
+    dummy.next = llist
+    prev = dummy
+    ```
+
+    - The checks and the pointer assignments are all constant-time operations: \(O(1)\).
+
+2. **Main Loop**:
+    ```python
+    while prev.next and prev.next.next:
+        current = prev.next
+        after = current.next
+        
+        current.next = after.next
+        after.next = current
+        prev.next = after
+        
+        prev = current
+    ```
+
+    - The loop runs for every pair of nodes in the linked list. If there are \(N\) nodes in the linked list, the loop roughly runs \(N/2\) times. But in terms of big-O notation, we represent this as \(O(N)\) since we ignore constant factors.
+    
+    - Inside the loop, all the operations (assignments, pointer changes, etc.) are constant-time operations, i.e., \(O(1)\).
+
+Therefore, combining everything, the overall time complexity is:
+
+\(O(1) + O(N) \times O(1) = O(N)\)
+
+This means that the time complexity of the `swap_every_two` function is linear in the size of the linked list.
+
+Here's a line-by-line breakdown of the code:
+
+1. `if not llist or not llist.next:` - Check if the list is empty or has a single node: \(O(1)\)
+2. `return llist` - Return the original list if no swaps needed: \(O(1)\)
+3. `dummy = Node(-1)` - Create a dummy node: \(O(1)\)
+4. `dummy.next = llist` - Link dummy node to the head of the list: \(O(1)\)
+5. `prev = dummy` - Set `prev` to the dummy node: \(O(1)\)
+
+6. `while prev.next and prev.next.next:` - Start of loop; runs for every pair of nodes: \(O(N)\)
+    - `current = prev.next` - Set the current node: \(O(1)\)
+    - `after = current.next` - Set the node following the current node: \(O(1)\)
+    - `current.next = after.next` - Update the next pointer of the current node: \(O(1)\)
+    - `after.next = current` - Update the next pointer of the 'after' node: \(O(1)\)
+    - `prev.next = after` - Update the next pointer of the 'prev' node: \(O(1)\)
+    - `prev = current` - Move the 'prev' pointer to the next node: \(O(1)\)
+
+- As you can see, all operations inside the loop are \(O(1)\), and the loop runs for \(O(N)\) iterations. Hence, the overall complexity is \(O(N)\).
+
+- 代码的功能是在链表中交换相邻的节点。我们逐步分析其时间复杂度。
+
+1. **设置指针和检查**:
+    ```python
+    if not llist or not llist.next:
+        return llist
+
+    dummy = Node(-1)
+    dummy.next = llist
+    prev = dummy
+    ```
+
+    - 检查和指针赋值都是常数时间操作: \(O(1)\)。
+
+2. **主循环**:
+    ```python
+    while prev.next and prev.next.next:
+        current = prev.next
+        after = current.next
+        
+        current.next = after.next
+        after.next = current
+        prev.next = after
+        
+        prev = current
+    ```
+
+    - 循环每次运行都针对链表中的两个节点。如果链表中有\(N\)个节点，循环大约运行\(N/2\)次。但在大O表示法中，我们将其表示为\(O(N)\)，因为我们忽略常数因子。
+    
+    - 循环内的所有操作（赋值、指针更改等）都是常数时间操作，即 \(O(1)\)。
+
+所以，综合上述，总的时间复杂度是:
+
+\(O(1) + O(N) \times O(1) = O(N)\)
+
+这意味着`swap_every_two`函数的时间复杂度是链表大小的线性时间。
+
+以下是代码的逐行分析：
+
+1. `if not llist or not llist.next:` - 检查链表是否为空或只有一个节点: \(O(1)\)
+2. `return llist` - 如果不需要交换，则返回原始列表: \(O(1)\)
+3. `dummy = Node(-1)` - 创建一个虚拟节点: \(O(1)\)
+4. `dummy.next = llist` - 将虚拟节点链接到列表的头部: \(O(1)\)
+5. `prev = dummy` - 将`prev`设置为虚拟节点: \(O(1)\)
+
+6. `while prev.next and prev.next.next:` - 开始循环；针对每对节点运行: \(O(N)\)
+    - `current = prev.next` - 设置当前节点: \(O(1)\)
+    - `after = current.next` - 设置当前节点的下一个节点: \(O(1)\)
+    - `current.next = after.next` - 更新当前节点的下一个指针: \(O(1)\)
+    - `after.next = current` - 更新'after'节点的下一个指针: \(O(1)\)
+    - `prev.next = after` - 更新'prev'节点的下一个指针: \(O(1)\)
+    - `prev = current` - 将'prev'指针移动到下一个节点: \(O(1)\)
+
+正如你看到的，循环内的所有操作都是 \(O(1)\)，循环进行 \(O(N)\) 次迭代。因此，总的复杂性是 \(O(N)\)。
