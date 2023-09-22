@@ -35,6 +35,31 @@
 
 ⚡️ **UDP**（用户数据报协议） - 虽然TCP是关于可靠性的，但UDP是关于速度的。对于实时速度很重要的活动（例如观看现场体育直播或玩在线游戏），UDP通常是首选，因为它在没有TCP所做的来回检查的情况下发送数据。
 
----
+🌐 **TCP/IP**:
+   * **Example**: Imagine you’re downloading a large file. If any piece of the file gets corrupted or lost during the transmission, TCP ensures that the specific corrupted piece is re-sent, ensuring the file you receive is complete and uncorrupted.
+   * **Example**: Online shopping. When you're checking out and submitting your payment information, TCP/IP ensures that the data is sent securely and reliably to the payment gateway.
 
-希望这些详细说明能为您提供每个协议在互联网通信广阔领域中的角色的更清晰的图片！
+🔎 **DNS**:
+   * **Example**: If "google.com" is translated to the IP address "216.58.217.46", instead of typing the numerical IP into your browser, you just type the domain name, and DNS takes care of the rest.
+   * **Example**: When connecting a device to a Wi-Fi network, DNS ensures that friendly domain names like "printer.local" get translated into IP addresses that devices on the network understand.
+
+🌐 **HTTP**:
+   * **Example**: Visiting a news website. When you want to read an article, your browser sends an HTTP GET request to the news website's server, which then sends back the requested article.
+   * **Example**: Submitting a form on a website. The data you enter is typically sent as an HTTP POST request to the server.
+
+🔒 **HTTPS**:
+   * **Example**: Online banking. When you log in to check your balance or make a transfer, HTTPS encrypts your login credentials and transaction details.
+   * **Example**: E-commerce sites. When you enter your credit card details to make a purchase, HTTPS ensures the data is encrypted, protecting it from potential hackers.
+
+✉️ **SMTP**:
+   * **Example**: After writing an email in Gmail and clicking "Send", Gmail uses SMTP to push that email out to the recipient's email server.
+   * **Example**: Automated email notifications. When you receive an email alert about a new follower on a social media platform, SMTP was used to send that notification to you.
+
+🗂️ **FTP**:
+   * **Example**: Web developers often use FTP to upload new or updated website files to a hosting server.
+   * **Example**: Downloading public datasets. Some organizations offer large datasets through FTP for faster and more reliable downloads.
+
+⚡️ **UDP**:
+   * **Example**: Voice over IP (VoIP) calls, like Skype or Zoom. Since real-time conversation is crucial, UDP is preferred because a few dropped packets (slight glitches in voice) are preferable to waiting for every packet to be confirmed.
+   * **Example**: Live sports streaming. If there's a tiny interruption in the stream, it's better for the action to continue without waiting for the missing data. This is achieved using UDP.
+
