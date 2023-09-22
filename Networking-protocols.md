@@ -17,10 +17,6 @@
 
 ⚡️ **UDP** (User Datagram Protocol) - While TCP is about reliability, UDP is about speed. For activities where real-time speed matters (like watching a live sports stream or playing an online game), UDP is often the go-to choice because it sends data without the back-and-forth checks TCP does.
 
-Absolutely, let's delve deeper into SMTP and SSH:
-
----
-
 ✉️ **SMTP (Simple Mail Transfer Protocol)**:
 
 **Overview**:
