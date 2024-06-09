@@ -1,4 +1,4 @@
-#Python的多种用途
+# Python的多种用途
 ### Different Uses of Python
 
 Python是一种多功能的编程语言，可以通过不同的库来实现多种应用。以下是一些常见的Python库及其用途：
