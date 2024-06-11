@@ -119,23 +119,26 @@ OSI（开放系统互联）模型是一个用于理解和实现计算机网络�
 
 ---
 
-### Markdown Diagram
+### Diagram
 
-```markdown
+```mermaid
 graph TD
-    A[Application Layer]
-    B[Presentation Layer]
-    C[Session Layer]
-    D[Transport Layer]
-    E[Network Layer]
-    F[Data Link Layer]
-    G[Physical Layer]
+    A[Application Layer] -->|HTTP, FTP, SMTP| A1[Provides network services directly to end-user applications]
+    B[Presentation Layer] -->|SSL/TLS, JPEG| B1[Translates data formats between the application and the network]
+    C[Session Layer] -->|NetBIOS, PPTP| C1[Manages sessions and controls connections between computers]
+    D[Transport Layer] -->|TCP, UDP| D1[Provides reliable data transfer services to the upper layers]
+    E[Network Layer] -->|IP, ICMP, Routers| E1[Routes the data packet across the network from the source to the destination]
+    F[Data Link Layer] -->|MAC Addresses, Switches, Ethernet| F1[Provides node-to-node data transfer and handles error correction from the physical layer]
+    G[Physical Layer] -->|Hubs, Fiber Optic, Cables| G1[Transmits raw bit streams over a physical medium]
+```
 
-    A --> |HTTP, FTP, SMTP| A1[Provides network services directly to end-user applications]
-    B --> |SSL/TLS, JPEG| B1[Translates data formats between the application and the network]
-    C --> |NetBIOS, PPTP| C1[Manages sessions and controls connections between computers]
-    D --> |TCP, UDP| D1[Provides reliable data transfer services to the upper layers]
-    E --> |IP, ICMP, Routers| E1[Routes the data packet across the network from the source to the destination]
-    F --> |MAC Addresses, Switches, Ethernet| F1[Provides node-to-node data transfer and handles error correction from the physical layer]
-    G --> |Hubs, Fiber Optic, Cables| G1[Transmits raw bit streams over a physical medium]
+```mermaid
+graph TD
+    A[应用层] -->|HTTP, FTP, SMTP| A1[直接为终端用户应用程序提供网络服务]
+    B[表示层] -->|SSL/TLS, JPEG| B1[在应用层和网络之间翻译数据格式]
+    C[会话层] -->|NetBIOS, PPTP| C1[管理会话并控制计算机之间的连接]
+    D[传输层] -->|TCP, UDP| D1[为上层提供可靠的数据传输服务]
+    E[网络层] -->|IP, ICMP, 路由器| E1[在网络中从源到目的地路由数据包]
+    F[数据链路层] -->|MAC地址, 交换机, 以太网| F1[提供节点到节点的数据传输并处理物理层的错误校正]
+    G[物理层] -->|集线器, 光纤, 电缆| G1[通过物理介质传输原始比特流]
 ```
