@@ -2,8 +2,12 @@
 From zero to hero: A newbie coding journey
 
 ## Recommend websites/authors to follow.
-#### bytebytego https://bytebytego.com/ Ace Your Next System Design Interview: Everything you need to take your system design skill to the next level (newsletter https://blog.bytebytego.com/)
 
-#### neetcode https://neetcode.io/
-#### deeplearning https://www.deeplearning.ai/
+
+### System Design
+-  bytebytego https://bytebytego.com/
+### Code Interview
+- neetcode https://neetcode.io/
+### AI
+- deeplearning https://www.deeplearning.ai/
 
