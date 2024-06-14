@@ -73,12 +73,12 @@ From zero to hero: A newbie coding journey
     - Example: Build simple web pages using HTML, style them with CSS, and add interactivity with JavaScript.
     - 例子：使用HTML构建简单网页，使用CSS进行样式设计，并使用JavaScript添加交互功能。
 
-13. **Understand Front-End Frameworks (React, Angular, Vue.js)**
+13. **Understand on of Front-End Frameworks (React, Angular, Vue.js)**
     - **理解前端框架（React, Angular, Vue.js）**
     - Example: Create dynamic web applications using React or Angular.
     - 例子：使用React或Angular创建动态Web应用。
 
-14. **Learn Back-End Development (Node.js, Django, Spring)**
+14. **Learn on of Back-End Development (Node.js, Django, Spring)**
     - **学习后端开发（Node.js, Django, Spring）**
     - Example: Develop server-side applications using Node.js or Django.
     - 例子：使用Node.js或Django开发服务器端应用。
@@ -171,9 +171,7 @@ From zero to hero: A newbie coding journey
 32. **Learn about Performance Optimization**
     - **学习性能优化**
     - Example: Optimize database queries and reduce application latency.
-    - 例子：优化数据库查询并减少应用
-
-延迟。
+    - 例子：优化数据库查询并减少应用延迟。
 
 33. **Explore Big Data Technologies (Hadoop, Spark)**
     - **探索大数据技术（Hadoop, Spark）**
