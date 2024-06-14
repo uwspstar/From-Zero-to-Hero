@@ -264,7 +264,7 @@ From zero to hero: A newbie coding journey
     - 例子：参加在线课程、参加会议并阅读行业出版物。
 
 
-## 8 Standards Developers Should Know 开发人员应该了解的8个标准
+## 开发人员应该了解的8个标准
 
 ### 1. TCP/IP
 
