@@ -3,7 +3,6 @@ From zero to hero: A newbie coding journey
 
 ## Recommend websites/authors to follow.
 
-
 ### System Design
 -  bytebytego https://bytebytego.com/
 ### Code Interview
