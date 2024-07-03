@@ -49,6 +49,29 @@ print(transpose(mat))
 #  [2, 5],
 #  [3, 6]]
 ```
+```python
+
+def transpose(mat):
+  # Fill this in.
+  result = []
+  for col in range(len(mat[0])):
+    tmp = []
+    for row in range(len(mat)):
+      tmp.append(mat[row][col])
+    result.append(tmp)
+      
+      
+
+mat = [
+    [1, 2, 3], #row
+    [4, 5, 6],
+]
+
+print(transpose(mat))
+# [[1, 4],
+#  [2, 5], 
+#  [3, 6]
+```
 
 ### Explanation of the Code
 
