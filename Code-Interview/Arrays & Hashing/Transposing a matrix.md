@@ -70,7 +70,7 @@ mat = [
 print(transpose(mat))
 # [[1, 4],
 #  [2, 5], 
-#  [3, 6]
+#  [3, 6]]
 ```
 
 ### Explanation of the Code
