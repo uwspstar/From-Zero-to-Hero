@@ -1,15 +1,8 @@
-### Enhancing Database Password Security with Salting
-
-#### Explanation in English and Chinese
+# Enhancing Database Password Security with Salting
 
 Password security is crucial in database management. Simply hashing passwords without additional security measures can leave them vulnerable to certain attacks, such as rainbow table attacks. Salting is an effective technique to enhance password security.
 
 数据库管理中，密码安全至关重要。单纯地对密码进行哈希处理而没有额外的安全措施，会使它们容易受到某些攻击，例如彩虹表攻击。加盐是一种有效的技术，可以增强密码的安全性。
-
-#### Diagram Explanation
-This diagram explains the process and importance of salting passwords.
-
-该图解释了密码加盐的过程和重要性。
 
 1. **Basic Hashing** (基本哈希)
    - When passwords like "Apple" are hashed without salt, they produce the same hash value.
