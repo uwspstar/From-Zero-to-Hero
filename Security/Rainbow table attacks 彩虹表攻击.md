@@ -1,4 +1,4 @@
-# rainbow table attacks
+# Rainbow table attacks 彩虹表攻击
 
 ### Rainbow Table Attacks
 
