@@ -10,6 +10,10 @@ From zero to hero: A newbie coding journey
 ### AI
 - deeplearning https://www.deeplearning.ai/
 
+### codebitwave 
+- https://codebitwave.com/
+
+
 ### 成为一名顶尖软件工程师的50个步骤
 
 1. **Understand the Basics of Computer Science**
