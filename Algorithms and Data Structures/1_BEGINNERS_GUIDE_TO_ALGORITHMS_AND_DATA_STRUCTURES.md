@@ -79,6 +79,9 @@
 ### What are Algorithms?
 An algorithm is a step-by-step procedure for solving a problem or accomplishing some end.
 
+- [Introduction to Algorithms by Abdul Bari](https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&index=1)
+- [Introduction by neetcode](https://neetcode.io/courses/dsa-for-beginners/0)
+
 ### What are Data Structures?
 Data structures are ways to organize and store data so that they can be accessed and modified efficiently.
 
