@@ -1,5 +1,7 @@
 ### Concurrency vs Parallelism in System Design
 
+- [Concurrency vs Parallelism in System Design](https://codebitwave.com/system-design-101-concurrency-vs-parallelism-in-system-design/)
+
 Understanding the distinction between concurrency and parallelism is crucial in system design. As Rob Pyke, one of the creators of GoLang, stated: 
 
 > “Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once."
