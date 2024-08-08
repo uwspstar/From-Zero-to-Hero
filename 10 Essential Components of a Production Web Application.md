@@ -1,7 +1,7 @@
 # 10 Essential Components of a Production Web Application
 
 - [10 Essential Components of a Production Web Application](https://codebitwave.com/system-design-101-10-essential-components-of-a-production-web-application/)
-- 
+  
 # 生产环境 Web 应用程序的 10 个基本组成部分
 
 ## 1. CI/CD Pipelines
