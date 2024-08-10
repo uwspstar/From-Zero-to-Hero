@@ -76,7 +76,6 @@ When you login to a website, your identity needs to be managed. Here is how diff
 
 #### Comparison Table
 
-```markdown
 | Method     | Pros                                     | Cons                                 | Use Case                               |
 |------------|------------------------------------------|--------------------------------------|----------------------------------------|
 | Sessions   | Simple, widely supported                 | Doesn't work well across devices     | Web applications                       |
@@ -84,4 +83,4 @@ When you login to a website, your identity needs to be managed. Here is how diff
 | JWT        | Secure, self-contained                   | Can be large and complex             | Authentication for APIs                |
 | SSO        | Convenient for users                     | Complex to implement                 | Enterprise applications                |
 | OAuth 2.0  | Secure, flexible                         | Requires understanding of OAuth flows| Third-party application authorization  |
-```
+
