@@ -1,5 +1,7 @@
 # Various authentication mechanisms, including session, cookie, JWT, token, SSO, and OAuth 2.0. 
 
+- [Understanding Various Authentication Mechanisms](https://codebitwave.com/security-101-understanding-various-authentication-mechanisms/)
+- 
 Here is a summary of each method as depicted:
 
 1. **WWW-Authenticate**:
