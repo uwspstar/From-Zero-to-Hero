@@ -2,6 +2,9 @@
 
 ### Comparison of Session, JWT, Token, SSO, and OAuth 2.0
 
+- [Comparison of Session, JWT, Token, SSO, and OAuth 2.0](https://codebitwave.com/security-101-comparison-of-session-jwt-token-sso-and-oauth-2-0/)
+
+
 When you login to a website, your identity needs to be managed. Here is how different solutions work:
 | Mechanism | Description (English)                                                                                                                                                             | Description (Chinese)                                                                                                                              |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
