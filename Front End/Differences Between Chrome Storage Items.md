@@ -1,13 +1,4 @@
 # Differences Between Chrome Storage Items 
-### Summary:
-
-- **Local Storage** and **Session Storage** are suitable for simpler key-value pairs but differ in persistence.
-- **IndexedDB** is ideal for large, complex datasets and is designed to work asynchronously for better performance.
-- **Cookies** are small, automatically sent with HTTP requests, and used for session management but have limited storage capacity.
-- **Private State Tokens** and **Interest Groups** focus on privacy-preserving mechanisms.
-- **Shared Storage** and **Cache Storage** are more specialized for efficient data sharing and caching, particularly in complex web applications.
-- **Storage Buckets** provide developers with advanced control over how data is stored, useful for managing large or complex applications.
-
 
 | **Storage Type**         | **Persistent** | **Capacity**                  | **Synchronous/Asynchronous** | **Use Case**                                                             | **Key Features**                                                     |
 |--------------------------|----------------|--------------------------------|------------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------------|
