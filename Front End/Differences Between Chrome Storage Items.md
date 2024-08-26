@@ -2,15 +2,15 @@
 
 | **Storage Type**         | **Persistent** | **Capacity**                  | **Synchronous/Asynchronous** | **Use Case**                                                             | **Key Features**                                                     |
 |--------------------------|----------------|--------------------------------|------------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------------|
-| **Local Storage**         | Yes            | ~5-10MB per origin             | Synchronous                  | Storing user preferences, keeping track of user activity across sessions | Persistent, simple key-value storage, blocks main thread              |
-| **Session Storage**       | No (session-only) | ~5-10MB per origin             | Synchronous                  | Temporary data like form inputs, shopping carts within a session         | Temporary, per-session, data deleted when tab/window is closed        |
-| **IndexedDB**             | Yes            | Very large (depends on device) | Asynchronous                 | Large datasets, offline web applications                                | Structured data, supports large data, complex queries and transactions |
-| **Cookies**               | Yes (configurable) | 4KB per cookie                 | Synchronous                  | Session management, user tracking, storing small pieces of user data     | Automatically sent with HTTP requests, supports expiration dates     |
-| **Private State Tokens**  | Yes            | Small                         | Asynchronous                 | Privacy-preserving user authentication                                   | Prevents cross-site tracking, privacy-focused cryptographic tokens    |
-| **Interest Groups**       | Yes            | Depends on implementation      | Asynchronous                 | Privacy-friendly advertising                                             | Groups users by interest, prevents individual tracking                |
-| **Shared Storage**        | Yes            | Depends on implementation      | Asynchronous                 | Sharing data across contexts (e.g., iframes, workers) within the same origin | Cross-context data sharing, reduces redundancy, improves efficiency   |
-| **Cache Storage**         | Yes            | Depends on implementation      | Asynchronous                 | Caching assets for offline access, improving load times                  | Supports offline access, caches requests/responses, part of Service Workers |
-| **Storage Buckets**       | Yes            | Depends on configuration       | Asynchronous                 | Managing complex datasets, implementing custom storage policies          | Isolated storage containers, granular control over storage policies   |
+| **[Local Storage](https://codebitwave.com/web-browser-local-storage/)**         | Yes            | ~5-10MB per origin             | Synchronous                  | Storing user preferences, keeping track of user activity across sessions | Persistent, simple key-value storage, blocks main thread              |
+| **[Session Storage](https://codebitwave.com/web-browser-session-storage/)**       | No (session-only) | ~5-10MB per origin             | Synchronous                  | Temporary data like form inputs, shopping carts within a session         | Temporary, per-session, data deleted when tab/window is closed        |
+| **[IndexedDB](https://codebitwave.com/web-browser-indexeddb/)**             | Yes            | Very large (depends on device) | Asynchronous                 | Large datasets, offline web applications                                | Structured data, supports large data, complex queries and transactions |
+| **[Cookies](https://codebitwave.com/web-browser-cookies/)**               | Yes (configurable) | 4KB per cookie                 | Synchronous                  | Session management, user tracking, storing small pieces of user data     | Automatically sent with HTTP requests, supports expiration dates     |
+| **[Private State Tokens](https://codebitwave.com/web-browser-private-state-tokens/)**  | Yes            | Small                         | Asynchronous                 | Privacy-preserving user authentication                                   | Prevents cross-site tracking, privacy-focused cryptographic tokens    |
+| **[Interest Groups](https://codebitwave.com/web-browser-interest-groups/)**       | Yes            | Depends on implementation      | Asynchronous                 | Privacy-friendly advertising                                             | Groups users by interest, prevents individual tracking                |
+| **[Shared Storage](https://codebitwave.com/web-browser-shared-storage/)**        | Yes            | Depends on implementation      | Asynchronous                 | Sharing data across contexts (e.g., iframes, workers) within the same origin | Cross-context data sharing, reduces redundancy, improves efficiency   |
+| **[Cache Storage](https://codebitwave.com/web-browser-cache-storage/)**         | Yes            | Depends on implementation      | Asynchronous                 | Caching assets for offline access, improving load times                  | Supports offline access, caches requests/responses, part of Service Workers |
+| **[Storage Buckets](https://codebitwave.com/web-browser-storage-buckets/)**       | Yes            | Depends on configuration       | Asynchronous                 | Managing complex datasets, implementing custom storage policies          | Isolated storage containers, granular control over storage policies   |
 
 
 This table helps to quickly identify which storage option might be the best fit for specific use cases in web development.
@@ -19,7 +19,7 @@ This table helps to quickly identify which storage option might be the best fit 
 
 Web browsers, including Chrome, offer various storage options to manage data on the client side. Each of these storage mechanisms serves different purposes, has different lifetimes, and is suited for different types of data. Below is an explanation of each storage type mentioned:
 
-## 1. Local Storage 本地存储
+## 1. [Local Storage 本地存储](https://codebitwave.com/web-browser-local-storage/)
 
 ### What is Local Storage?
 Local storage is a type of web storage that allows websites to store data as key-value pairs in the browser with no expiration time. This data persists even after the browser is closed and reopened, making it useful for storing information that needs to be retained across sessions.
@@ -44,7 +44,7 @@ Local storage is a type of web storage that allows websites to store data as key
 - 跨会话跟踪用户活动。
 - 存储不需要安全处理的非敏感数据。
 
-## 2. Session Storage 会话存储
+## 2. [Session Storage 会话存储](https://codebitwave.com/web-browser-session-storage/)
 
 ### What is Session Storage?
 Session storage is similar to local storage but with a key difference: data stored in session storage is only available for the duration of the page session. Once the tab or window is closed, the data is automatically deleted.
@@ -67,7 +67,7 @@ Session storage is similar to local storage but with a key difference: data stor
 - 存储临时数据，如表单输入或购物车，这些数据不应在会话之外持久存在。
 - 管理单个会话内的状态，而不影响其他会话或标签页。
 
-## 3. IndexedDB
+## 3. [IndexedDB](https://codebitwave.com/web-browser-indexeddb/)
 
 ### What is IndexedDB?
 IndexedDB is a low-level API for storing large amounts of structured data in the browser. It allows for complex queries and transactions and is designed to store significant amounts of data, such as large files, and structured data in a way that is accessible through indexed searches.
@@ -90,7 +90,7 @@ IndexedDB is a low-level API for storing large amounts of structured data in the
 - 存储大型数据集，如用户生成的内容、媒体文件或应用程序状态。
 - 构建需要复杂数据存储和检索的离线 Web 应用程序。
 
-## 4. Cookies
+## 4. [Cookies](https://codebitwave.com/web-browser-cookies/)
 
 ### What are Cookies?
 Cookies are small pieces of data stored by the browser that are sent back to the server with each HTTP request. They are commonly used for session management, tracking user behavior, and storing user-specific information.
@@ -115,7 +115,7 @@ Cookies are small pieces of data stored by the browser that are sent back to the
 - 跟踪用户跨访问的行为（如分析）。
 - 存储用户特定的小信息（如语言偏好）。
 
-## 5. Private State Tokens 私有状态令牌
+## 5. [Private State Tokens 私有状态令牌](https://codebitwave.com/web-browser-private-state-tokens/)
 
 ### What are Private State Tokens?
 Private State Tokens are part of a new privacy-preserving mechanism to prevent tracking across different sites. They allow a server to validate a user's authenticity without revealing identity or exposing data that could be used for cross-site tracking.
@@ -136,7 +136,7 @@ Private State Tokens are part of a new privacy-preserving mechanism to prevent t
 - 在 Web 应用程序中保护用户隐私，同时保持安全性和真实性。
 - 防止在广告和分析等上下文中的跨站跟踪。
 
-## 6. Interest Groups 兴趣组
+## 6. [Interest Groups 兴趣组](https://codebitwave.com/web-browser-interest-groups/)
 
 ### What are Interest Groups?
 Interest Groups are part of the Privacy Sandbox initiative, designed to support privacy-friendly advertising. They allow users to be grouped based on interests without revealing personal data to advertisers.
@@ -157,7 +157,7 @@ Interest Groups are part of the Privacy Sandbox initiative, designed to support 
 - 基于兴趣组投放定向广告，而非个人跟踪。
 - 在现代浏览器中支持隐私友好的广告技术。
 
-## 7. Shared Storage 共享存储
+## 7. [Shared Storage 共享存储](https://codebitwave.com/web-browser-shared-storage/)
 
 ### What is Shared Storage?
 Shared Storage is a proposed API that allows websites to share storage between different contexts, such as different iframes or workers, within the same origin. It enables more efficient data sharing and coordination within the same application.
@@ -178,7 +178,7 @@ Shared Storage is a proposed API that allows websites to share storage between d
 - 协调 Web 应用程序不同组件之间的状态或数据。
 - 在复杂 Web 应用程序的不同部分之间高效共享数据。
 
-## 8. Cache Storage 缓存存储
+## 8. [Cache Storage 缓存存储](https://codebitwave.com/web-browser-cache-storage/)
 
 ### What is Cache Storage?
 Cache Storage is part of the Service Worker API and allows web applications to store network requests and responses, enabling offline access and faster load times. It provides a way to cache assets like HTML, CSS, JS, and other resources.
@@ -201,7 +201,7 @@ Cache Storage is part of the Service Worker API and allows web applications to s
 - 缓存静态资源（如 HTML、CSS、JS 和图片）以实现离线访问。
 - 通过提供缓存数据提高 Web 应用程序的性能。
 
-## 9. Storage Buckets 存储桶
+## 9. [Storage Buckets 存储桶](https://codebitwave.com/web-browser-storage-buckets/)
 
 ### What are Storage Buckets?
 Storage Buckets are part of a new API designed to give developers more control over how data is stored and managed in the browser. They allow developers to create isolated storage containers with specific rules and limits, improving data management and performance.
