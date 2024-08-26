@@ -1,5 +1,7 @@
 # The best security practices for API usage
 
+- [Securing API Usage](https://codebitwave.com/security-101-securing-api-usage/)
+
 ### Introduction (简介)
 
 In this guide, we'll walk through the best security practices for API usage using Angular (frontend) and Node.js (backend). We'll cover how to securely track API usage, store data, and enforce limits to ensure that your application is protected against potential vulnerabilities. This guide is tailored for beginners, so we'll explain each step in detail.
