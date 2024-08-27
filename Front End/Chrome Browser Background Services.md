@@ -4,18 +4,18 @@ Here’s a comparison table summarizing the differences and features of the vari
 
 | **Background Service**      | **Purpose**                                                                 | **Key Features**                                                                 | **Use Cases**                                                                                                  |
 |-----------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| **Back/Forward Cache**       | Caches entire pages for instant back/forward navigation.                     | - Instant page load times<br>- State preservation<br>- Automatic management       | - Enhancing user experience with faster back/forward navigation.<br>- Reducing network load.                  |
-| **Background Fetch**         | Fetches large files in the background even when the browser is closed.       | - Persistent downloads<br>- Notification integration<br>- Progress monitoring     | - Downloading large assets like videos or datasets.<br>- Supporting offline-ready web applications.            |
-| **Background Sync**          | Defers tasks until the user has a stable internet connection.                | - Deferred tasks<br>- Reliable syncing<br>- Offline capability                    | - Syncing data when the user is offline.<br>- Ensuring critical tasks are completed when connectivity returns.  |
-| **Bounce Tracking Mitigations** | Prevents tracking across sites using bounce tracking techniques.              | - Privacy protection<br>- Automatic handling                                      | - Enhancing privacy by preventing bounce tracking.<br>- Protecting users from third-party tracking domains.     |
-| **Notifications**            | Sends alerts to users even when the browser is not actively being used.      | - User engagement<br>- Cross-platform<br>- Customizable                           | - Sending reminders or alerts for events, tasks, or messages.<br>- Informing users of real-time updates.        |
-| **Payment Handler**          | Processes payments by integrating with different payment methods.           | - Integration with payment methods<br>- Custom payment flows<br>- Secure transactions | - Enabling in-app purchases or online transactions.<br>- Integrating multiple payment methods.                |
-| **Periodic Background Sync** | Periodically syncs data in the background, even when the web app is closed.  | - Periodic updates<br>- Offline functionality<br>- Automatic handling             | - Keeping content like news or updates current.<br>- Syncing user data even if the app is not actively used.    |
-| **Speculative Loads**        | Preloads resources based on predicted user behavior.                         | - Performance improvement<br>- User behavior prediction<br>- Transparent to user   | - Preloading resources for likely navigation paths.<br>- Enhancing single-page application performance.        |
-| **Push Messaging**           | Sends notifications or updates to users even when the browser is closed.     | - Real-time communication<br>- Persistent delivery<br>- Notification integration  | - Sending real-time notifications for new messages or updates.<br>- Keeping users engaged with timely alerts.   |
-| **Reporting API**            | Sends reports about various events, such as security violations or deprecations. | - Real-time monitoring<br>- Configurable endpoints<br>- Improved security         | - Monitoring security violations.<br>- Tracking deprecated API usage or feature usage.                         |
+| **[Back/Forward Cache](https://codebitwave.com/chromes-background-services-back-forward-cache/)**       | Caches entire pages for instant back/forward navigation.                     | - Instant page load times<br>- State preservation<br>- Automatic management       | - Enhancing user experience with faster back/forward navigation.<br>- Reducing network load.                  |
+| **[Background Fetch](https://codebitwave.com/chromes-background-services-background-fetch/)**         | Fetches large files in the background even when the browser is closed.       | - Persistent downloads<br>- Notification integration<br>- Progress monitoring     | - Downloading large assets like videos or datasets.<br>- Supporting offline-ready web applications.            |
+| **[Background Sync](https://codebitwave.com/chromes-background-services-background-sync/)**          | Defers tasks until the user has a stable internet connection.                | - Deferred tasks<br>- Reliable syncing<br>- Offline capability                    | - Syncing data when the user is offline.<br>- Ensuring critical tasks are completed when connectivity returns.  |
+| **[Bounce Tracking Mitigations](https://codebitwave.com/chromes-background-services-bounce-tracking-mitigations/)** | Prevents tracking across sites using bounce tracking techniques.              | - Privacy protection<br>- Automatic handling                                      | - Enhancing privacy by preventing bounce tracking.<br>- Protecting users from third-party tracking domains.     |
+| **[Notifications](https://codebitwave.com/chromes-background-services-notifications/)**            | Sends alerts to users even when the browser is not actively being used.      | - User engagement<br>- Cross-platform<br>- Customizable                           | - Sending reminders or alerts for events, tasks, or messages.<br>- Informing users of real-time updates.        |
+| **[Payment Handler](https://codebitwave.com/chromes-background-services-payment-handler/)**          | Processes payments by integrating with different payment methods.           | - Integration with payment methods<br>- Custom payment flows<br>- Secure transactions | - Enabling in-app purchases or online transactions.<br>- Integrating multiple payment methods.                |
+| **[Periodic Background Sync](https://codebitwave.com/chromes-background-services-periodic-background-sync/)** | Periodically syncs data in the background, even when the web app is closed.  | - Periodic updates<br>- Offline functionality<br>- Automatic handling             | - Keeping content like news or updates current.<br>- Syncing user data even if the app is not actively used.    |
+| **[Speculative Loads](https://codebitwave.com/chromes-background-services-speculative-loads/)**        | Preloads resources based on predicted user behavior.                         | - Performance improvement<br>- User behavior prediction<br>- Transparent to user   | - Preloading resources for likely navigation paths.<br>- Enhancing single-page application performance.        |
+| **[Push Messaging](https://codebitwave.com/chromes-background-services-push-messaging/)**           | Sends notifications or updates to users even when the browser is closed.     | - Real-time communication<br>- Persistent delivery<br>- Notification integration  | - Sending real-time notifications for new messages or updates.<br>- Keeping users engaged with timely alerts.   |
+| **[Reporting API](https://codebitwave.com/chromes-background-services-reporting-api/)**            | Sends reports about various events, such as security violations or deprecations. | - Real-time monitoring<br>- Configurable endpoints<br>- Improved security         | - Monitoring security violations.<br>- Tracking deprecated API usage or feature usage.                         |
 
-## 1. Back/Forward Cache 前进/后退缓存
+## 1. [Back/Forward Cache 前进/后退缓存](https://codebitwave.com/chromes-background-services-back-forward-cache/)
 
 ### What is Back/Forward Cache?
 The Back/Forward Cache (bfcache) is a browser optimization that allows instant navigation to pages that have already been visited by caching the entire page, including its JavaScript and DOM state. This means that when a user navigates back or forward to a previously visited page, the page can be restored instantly from memory instead of being reloaded from the network.
@@ -38,7 +38,7 @@ The Back/Forward Cache (bfcache) is a browser optimization that allows instant n
 - 通过在单页应用程序（SPAs）或动态网页中提供更快的前进和后退导航，增强用户体验。
 - 通过重复使用已获取的资源来减少网络负载。
 
-## 2. Background Fetch 后台提取
+## 2. [Background Fetch 后台提取](https://codebitwave.com/chromes-background-services-background-fetch/)
 
 ### What is Background Fetch?
 Background Fetch allows web applications to fetch large files or multiple files in the background, even if the user closes the browser or navigates away from the page. This is particularly useful for downloading large assets such as videos or large datasets that may take a long time to complete.
@@ -61,7 +61,7 @@ Background Fetch allows web applications to fetch large files or multiple files 
 - 下载需要持久下载功能的大型视频文件或数据集。
 - 需要在后台提取内容的离线就绪 Web 应用程序。
 
-## 3. Background Sync 后台同步
+## 3. [Background Sync 后台同步](https://codebitwave.com/chromes-background-services-background-sync/)
 
 ### What is Background Sync?
 Background Sync is a service worker feature that allows web applications to defer tasks until the user has a stable internet connection. This is useful for actions such as sending messages or syncing data that should be completed even after the user leaves the site.
@@ -84,7 +84,7 @@ Background Sync is a service worker feature that allows web applications to defe
 - 在用户离线时同步用户数据，如表单提交或消息。
 - 确保一旦恢复连接就完成关键任务。
 
-## 4. Bounce Tracking Mitigations 跳出跟踪缓解
+## 4. [Bounce Tracking Mitigations 跳出跟踪缓解](https://codebitwave.com/chromes-background-services-bounce-tracking-mitigations/)
 
 ### What is Bounce Tracking Mitigation?
 Bounce tracking is a technique used by advertisers and analytics services to track users across different sites by redirecting them through an intermediate domain. Chrome’s bounce tracking mitigation aims to limit this kind of tracking by identifying and limiting the ability of these intermediate domains to store and share tracking data.
@@ -105,7 +105,7 @@ Bounce tracking is a technique used by advertisers and analytics services to tra
 - 通过防止网站之间的跳出跟踪来增强用户隐私。
 - 保护用户不被用于广告的第三方域跟踪。
 
-## 5. Notifications 通知
+## 5. [Notifications 通知](https://codebitwave.com/chromes-background-services-notifications/)
 
 ### What are Notifications?
 Notifications in Chrome allow web applications to send alerts to users, even when the browser is not actively being used. These notifications can be used to inform users about new messages, updates, or reminders, and are often integrated with the operating system’s notification system.
@@ -128,7 +128,7 @@ Notifications in Chrome allow web applications to send alerts to users, even whe
 - 发送活动、任务或消息的提醒或警报。
 - 让用户了解实时更新，如新闻或社交媒体通知。
 
-## 6. Payment Handler 支付处理程序
+## 6. [Payment Handler 支付处理程序](https://codebitwave.com/chromes-background-services-payment-handler/)
 
 ### What is a Payment Handler?
 The Payment Handler API allows web applications to process payments by integrating with different payment methods. It enables the creation of custom payment handlers that can interact with various payment services, providing a consistent user experience.
@@ -151,7 +151,7 @@ The Payment Handler API allows web applications to process payments by integrati
 - 通过简化、一致的界面启用应用内购买或在线交易。
 - 将多种支付方式集成到单一结账体验中。
 
-## 7. Periodic Background Sync 定期后台同步
+## 7. [Periodic Background Sync 定期后台同步](https://codebitwave.com/chromes-background-services-periodic-background-sync/)
 
 ### What is Periodic Background Sync?
 Periodic Background Sync allows web applications to periodically sync data in the background, even when the web app is not open. This ensures that the app's data remains up-to-date without requiring the user to interact with the app.
@@ -174,7 +174,7 @@ Periodic Background Sync allows web applications to periodically sync data in th
 - 让新闻、天气或股票更新等内容在 Web 应用程序中保持最新。
 - 确保即使应用程序未被积极使用，用户生成的数据也能同步。
 
-## 8. Speculative Loads 推测加载
+## 8. [Speculative Loads 推测加载](https://codebitwave.com/chromes-background-services-speculative-loads/)
 
 ### What are Speculative Loads?
 Speculative Loads are a performance optimization in Chrome where resources are preloaded based on predicted user behavior. This can include loading resources before they are actually needed, based on the likelihood that the user will navigate to a particular page or trigger a specific action.
@@ -197,7 +197,7 @@ Speculative Loads are a performance optimization in Chrome where resources are p
 - 预加载用户可能导航路径中下一个页面的资源，如图像、脚本或样式表。
 - 通过预加载组件或数据提升单页应用程序的性能。
 
-## 9. Push Messaging 推送消息
+## 9. [Push Messaging 推送消息](https://codebitwave.com/chromes-background-services-push-messaging/)
 
 ### What is Push Messaging?
 Push Messaging allows web applications to send notifications or updates to users even when the browser is closed. It uses the Push API and Service Workers to deliver real-time messages, making it ideal for applications that need to notify users of new content, messages, or other events.
@@ -220,7 +220,7 @@ Push Messaging allows web applications to send notifications or updates to users
 - 发送新消息、社交媒体更新或突发新闻的实时通知。
 - 通过及时的警报让用户即使在不使用应用程序时也保持参与。
 
-## 10. Reporting API 报告 API
+## 10. [Reporting API 报告 API](https://codebitwave.com/chromes-background-services-reporting-api/) 
 
 ### What is the Reporting API?
 The Reporting API allows web applications to send reports about various events, such as security violations, deprecations, and feature usage, back to the server. This enables developers to monitor the performance and security of their applications in real-time.
