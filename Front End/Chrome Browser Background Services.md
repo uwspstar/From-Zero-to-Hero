@@ -1,5 +1,20 @@
 # Chrome Browser Background Services Chrome 浏览器后台服务
 
+Here’s a comparison table summarizing the differences and features of the various Chrome background services mentioned above:
+
+| **Background Service**      | **Purpose**                                                                 | **Key Features**                                                                 | **Use Cases**                                                                                                  |
+|-----------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| **Back/Forward Cache**       | Caches entire pages for instant back/forward navigation.                     | - Instant page load times<br>- State preservation<br>- Automatic management       | - Enhancing user experience with faster back/forward navigation.<br>- Reducing network load.                  |
+| **Background Fetch**         | Fetches large files in the background even when the browser is closed.       | - Persistent downloads<br>- Notification integration<br>- Progress monitoring     | - Downloading large assets like videos or datasets.<br>- Supporting offline-ready web applications.            |
+| **Background Sync**          | Defers tasks until the user has a stable internet connection.                | - Deferred tasks<br>- Reliable syncing<br>- Offline capability                    | - Syncing data when the user is offline.<br>- Ensuring critical tasks are completed when connectivity returns.  |
+| **Bounce Tracking Mitigations** | Prevents tracking across sites using bounce tracking techniques.              | - Privacy protection<br>- Automatic handling                                      | - Enhancing privacy by preventing bounce tracking.<br>- Protecting users from third-party tracking domains.     |
+| **Notifications**            | Sends alerts to users even when the browser is not actively being used.      | - User engagement<br>- Cross-platform<br>- Customizable                           | - Sending reminders or alerts for events, tasks, or messages.<br>- Informing users of real-time updates.        |
+| **Payment Handler**          | Processes payments by integrating with different payment methods.           | - Integration with payment methods<br>- Custom payment flows<br>- Secure transactions | - Enabling in-app purchases or online transactions.<br>- Integrating multiple payment methods.                |
+| **Periodic Background Sync** | Periodically syncs data in the background, even when the web app is closed.  | - Periodic updates<br>- Offline functionality<br>- Automatic handling             | - Keeping content like news or updates current.<br>- Syncing user data even if the app is not actively used.    |
+| **Speculative Loads**        | Preloads resources based on predicted user behavior.                         | - Performance improvement<br>- User behavior prediction<br>- Transparent to user   | - Preloading resources for likely navigation paths.<br>- Enhancing single-page application performance.        |
+| **Push Messaging**           | Sends notifications or updates to users even when the browser is closed.     | - Real-time communication<br>- Persistent delivery<br>- Notification integration  | - Sending real-time notifications for new messages or updates.<br>- Keeping users engaged with timely alerts.   |
+| **Reporting API**            | Sends reports about various events, such as security violations or deprecations. | - Real-time monitoring<br>- Configurable endpoints<br>- Improved security         | - Monitoring security violations.<br>- Tracking deprecated API usage or feature usage.                         |
+
 ## 1. Back/Forward Cache 前进/后退缓存
 
 ### What is Back/Forward Cache?
