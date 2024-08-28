@@ -115,11 +115,3 @@ Yes, the improved code provided above is more efficient, especially in handling 
 1. **Python Official Documentation on Strings**: [Python Strings](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)
 2. **Big O Notation Explained**: [Big O Cheat Sheet](https://www.bigocheatsheet.com/)
 3. **Efficient String Operations**: [Python String Performance](https://realpython.com/python-string-split-concatenate-join/)
-4. **Palindrome Problems on LeetCode**: [LeetCode Palindrome Problems](https://leetcode.com/tag/palindrome/)
-
-1. **Python 字符串官方文档**: [Python Strings](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)
-2. **Big O 表示法解释**: [Big O Cheat Sheet](https://www.bigocheatsheet.com/)
-3. **高效字符串操作**: [Python String Performance](https://realpython.com/python-string-split-concatenate-join/)
-4. **LeetCode 上的回文问题**: [LeetCode Palindrome Problems](https://leetcode.com/tag/palindrome/)
-
-This structure should help you understand the code thoroughly while considering best practices and optimizations.
