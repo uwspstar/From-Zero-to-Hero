@@ -12,3 +12,8 @@
 
 ### Web browser: Chrome Storage Item
 - [Web browser: Chrome Storage Item](https://codebitwave.com/chrome-storage-item/)
+
+------
+
+### Chrome’s background services
+- [Chrome’s background services](https://codebitwave.com/chromes-background-services/)
