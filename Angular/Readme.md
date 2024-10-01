@@ -4,6 +4,7 @@
 - [What is Data Binding](https://github.com/uwspstar/From-Zero-to-Hero/edit/main/Angular/Data%20Binding.md)
 - [Event Delegation for Multiple Elements](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/Angular/Event%20Delegation%20for%20Multiple%20Elements.md)
 - [What is a Template Variable in Angular?](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/Angular/Template%20Variable.md)
+- [One-Way vs. Two-Way Data Binding](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/Angular/One-Way%20vs.%20Two-Way%20Data%20Binding.md)
 
 ---
 
