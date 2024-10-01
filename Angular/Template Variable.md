@@ -140,7 +140,7 @@ In this example:
 1. **Q**: What is a template variable in Angular, and how is it defined?
    - **A**: A template variable in Angular is a reference created in the HTML template using the `#` symbol followed by a name (e.g., `#variableName`). It is used to access elements, components, or directives within the template.
 
-2. **Q**: Can template variables be accessed in the component class (TypeScript)?
+2. **Q**: [Can template variables be accessed in the component class (TypeScript)?]()
    - **A**: No, template variables cannot be accessed directly in the component class. However, they can be passed as arguments to component methods.
 
 3. **Q**: How do you use a template variable with the `ngFor` directive?
