@@ -119,3 +119,40 @@ class Program
 ### Conclusion
 
 Thread priority in C# is a helpful feature for suggesting execution order to the OS scheduler, allowing you to influence which threads are more likely to run first. However, it should be used carefully, as it does not guarantee order and can impact application performance if misused. For most applications, the default priority is sufficient, and priority adjustments should be reserved for cases where specific tasks need preferential scheduling.
+
+---
+
+### Why Output Order Doesn’t Follow High - Normal - Low Thread Priority in the Code
+
+In this code, we set different priorities (`Lowest`, `Highest`, and `Normal`) for three threads, but the output doesn’t follow the expected priority order (High - Normal - Low). This happens because setting thread priority doesn’t strictly control the execution order of threads. Here’s a detailed explanation.
+
+### Thread Priority and Execution Order
+
+In .NET, thread priority (`ThreadPriority`) is merely a “suggestion” to the operating system, indicating that higher-priority threads should ideally be scheduled more frequently. However, priority settings don’t strictly control the execution sequence of threads for several reasons:
+
+1. **Priority Is Just a Scheduling Hint**:
+   - The operating system uses thread priority to allocate more CPU time to higher-priority threads, but it doesn’t guarantee that high-priority threads will always execute first.
+   - Priority influences how often a thread gets CPU time, not the exact order of execution. For instance, a high-priority thread may run more frequently than a low-priority thread, but the low-priority thread may still occasionally get CPU time before the high-priority thread.
+
+2. **Scheduling Is Managed by the Operating System**:
+   - The OS scheduler considers factors such as thread priority, system load, and other resource demands when deciding which thread gets CPU time.
+   - This means that even with priority settings, the OS may still schedule a lower-priority thread to run before a higher-priority one in certain situations.
+
+3. **Impact of Multi-Core Processors**:
+   - On multi-core systems, different threads can run in parallel on different CPU cores. This reduces the influence of priority on execution order, as threads may run simultaneously on separate cores.
+   - If `t1`, `t2`, and the main thread are on different cores, priority will have a minimal effect on their output order because they’re running in parallel.
+
+4. **Limited Priority Granularity**:
+   - Thread priority levels are limited to a small set of options (`Lowest`, `BelowNormal`, `Normal`, `AboveNormal`, `Highest`), which doesn’t allow fine-grained control over thread execution order.
+
+5. **Lack of Delays**:
+   - In the `WriteThreadId()` method, there’s no `Thread.Sleep` or other delay, so once a thread gets CPU time, it completes its output rapidly.
+   - Without delays, each thread runs at high speed when it’s scheduled, making priority less noticeable as the scheduler may allocate CPU time fairly, regardless of the set priority.
+
+### Possible Reasons for Mixed Output Order
+For these reasons, the actual output order doesn’t follow the `Highest` -> `Normal` -> `Lowest` priority sequence. Instead, the scheduler dynamically decides the execution order based on various factors, often resulting in interleaved or unordered output.
+
+### Conclusion
+In multithreaded programming, thread priority is only a hint, not a strict control mechanism. If precise execution order is needed, priority alone is insufficient. You may need to use other synchronization mechanisms (such as locks or semaphores) to ensure a specific execution sequence across threads.
+
+
