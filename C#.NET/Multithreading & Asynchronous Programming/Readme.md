@@ -3,7 +3,7 @@
 1. Introduction
 2. [CPU, Thread, and Thread Scheduler](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/002.%20CPU%2C%20Thread%2C%20and%20Thread%20Scheduler%20in%20C%23.md)
 3. [Basic Syntax to Start a Thread](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/003.%20Basic%20Syntax%20to%20Start%20a%20Thread%20in%20C%23.md)
-4. Why Use Threading for Divide and Conquer
+4. [Why Use Threading for Divide and Conquer](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/0004.%20Why%20Use%20Threading%20for%20Divide%20and%20Conquer%20in%20C%23.md)
 5. Why Use Threading to Offload Long-Running Tasks
 6. Assignment: Create a Web Server
 7. Threads Synchronization Overview
