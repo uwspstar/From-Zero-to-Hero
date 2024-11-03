@@ -1,7 +1,7 @@
 ### Multithreading & Asynchronous Programming in C#/.NET
 
 1. Introduction
-2. CPU, Thread, and Thread Scheduler
+2. [CPU, Thread, and Thread Scheduler](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/002.%20CPU%2C%20Thread%2C%20and%20Thread%20Scheduler%20in%20C%23.md)
 3. Basic Syntax to Start a Thread
 4. Why Use Threading for Divide and Conquer
 5. Why Use Threading to Offload Long-Running Tasks
