@@ -6,7 +6,6 @@
 
 ---
 
-```markdown
 | Data Structure        | Description                                      | Example Code                                                                                  |
 |-----------------------|--------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | **Array**             | Fixed-size collection of elements of the same type.  | ```csharp\nint[] numbers = { 1, 2, 3, 4, 5 };\n```                                           |
@@ -32,6 +31,5 @@
 | **ImmutableHashSet<T>** | Read-only set of unique elements.               | ```csharp\nvar set = ImmutableHashSet.Create(1, 2, 3);\n```                                  |
 | **ImmutableQueue<T>** | Read-only queue that supports enqueue operations but returns new queue on each modification. | ```csharp\nvar queue = ImmutableQueue.Create<int>();\nqueue = queue.Enqueue(1);\n``` |
 | **ImmutableStack<T>** | Read-only stack that returns a new stack on each modification. | ```csharp\nvar stack = ImmutableStack.Create<int>();\nstack = stack.Push(1);\n```           |
-```
 
 Each data structure provides specific functionalities tailored for different scenarios, from general-purpose collections like `List<T>` to specialized structures like `ImmutableStack<T>`.
