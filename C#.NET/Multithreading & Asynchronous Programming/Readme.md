@@ -16,7 +16,7 @@
 4. [Why Use Threading for Divide and Conquer](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20&%20Asynchronous%20Programming/004.%20Why%20Use%20Threading%20for%20Divide%20and%20Conquer%20in%20C%23.md)
 5. [Why Use Threading to Offload Long-Running Tasks](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/005.%20Why%20Use%20Threading%20to%20Offload%20Long-Running%20Tasks%20in%20C%23.md)
 6. Assignment: Create a Web Server
-7. Threads Synchronization Overview
+7. [Threads Synchronization Overview](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/007.%20Overview%20of%20Thread%20Synchronization.md)
 8. Critical Section and Atomic Operation
 9. Exclusive Lock
 10. Assignment: Airplane Seats Booking System
