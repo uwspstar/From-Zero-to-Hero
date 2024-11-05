@@ -18,7 +18,7 @@
 6. Assignment: Create a Web Server
 7. [Threads Synchronization Overview](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/007.%20Overview%20of%20Thread%20Synchronization.md)
 8. [Critical Section and Atomic Operation](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/008.%20Critical%20Section.md)
-9. Exclusive Lock
+9. [Exclusive Lock](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/009.%20Exclusive%20Lock.md)
 10. Assignment: Airplane Seats Booking System
 11. Using Monitor to Add Timeout for Locks
 12. Using Mutex to Synchronize Across Processes
