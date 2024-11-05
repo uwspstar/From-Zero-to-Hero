@@ -12,7 +12,9 @@ lock (lockObject)
 }
 ```
 
-The `lock` statement itself automatically releases the lock when the block exits, even if an exception is thrown inside the block. This is because `lock` is a syntactic sugar for `Monitor.Enter` and `Monitor.Exit`, with an implicit `try-finally` structure to ensure the lock is always released.
+The `lock` statement itself automatically releases the lock when the block exits, even if an exception is thrown inside the block. 
+
+#### This is because `lock` is a syntactic sugar for `Monitor.Enter` and `Monitor.Exit`, with an implicit `try-finally` structure to ensure the lock is always released.
 
 However, if you need more control over handling exceptions while still ensuring the lock is released, you might prefer using `Monitor.Enter` with explicit `try-catch-finally` for custom error handling.
 
