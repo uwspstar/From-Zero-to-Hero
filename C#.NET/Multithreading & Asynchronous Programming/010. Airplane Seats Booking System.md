@@ -1,0 +1,175 @@
+### Airplane Seats Booking System
+
+```csharp
+// 参考 https://aka.ms/new-console-template 获取更多信息
+// 引入系统命名空间
+using System;
+using System.Collections.Generic;
+using System.Threading;
+
+class Program
+{
+    // 定义请求队列，用于存储用户的请求
+    private static readonly Queue<string?> requestQueue = new Queue<string?>(); // 使用 readonly，防止队列引用被修改
+    // 定义可用票数，初始值为 10
+    private static int availableTickets = 10;
+    // 定义一个锁对象，用于同步对票数的访问
+    private static readonly object ticketsLock = new object(); // 使用 readonly，因为锁对象本身不需要修改
+
+    // 处理请求的方法
+    static void ProcessBooking(string? input)
+    {
+        Thread.Sleep(1500); // 模拟处理时间，暂停 1.5 秒
+
+        // 使用锁来确保线程安全的访问票数
+        lock (ticketsLock)
+        {
+            // 如果输入为 "b"，表示预定座位
+            if (input == "b")
+            {
+                // 检查是否有可用票
+                if (availableTickets > 0)
+                {
+                    availableTickets--; // 减少可用票数
+                    Console.WriteLine($"您的座位已预订。剩余座位：{availableTickets} 个。");
+                }
+                else
+                {
+                    Console.WriteLine("没有可用票了。"); // 若无票则提示无票
+                }
+            }
+            // 如果输入为 "c"，表示取消预定
+            else if (input == "c")
+            {
+                // 确保可用票数不会超过 10 张
+                if (availableTickets < 10)
+                {
+                    availableTickets++; // 增加可用票数
+                    Console.WriteLine();
+                    Console.WriteLine($"您的预订已取消。剩余座位：{availableTickets} 个。");
+                }
+                else
+                {
+                    Console.WriteLine("错误：当前无法取消预订。"); // 如果超出最大票数则提示错误
+                }
+            }
+        }
+    }
+
+    // 监控队列的方法
+    static void MonitorQueue()
+    {
+        // 持续监控请求队列
+        while (true)
+        {
+            // 使用锁来确保线程安全的访问队列
+            string? input = null;
+            lock (requestQueue)
+            {
+                if (requestQueue.Count > 0)
+                {
+                    input = requestQueue.Dequeue(); // 从队列中取出一个请求
+                }
+            }
+
+            // 如果从队列中取到请求，则创建新线程处理请求
+            if (input != null)
+            {
+                Thread processThread = new Thread(() => ProcessBooking(input)); // 创建新线程处理请求
+                processThread.Start();
+            }
+            Thread.Sleep(100); // 短暂等待，避免频繁检查队列
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        // 启动监控线程，用于监控队列
+        Thread monitoringThread = new Thread(MonitorQueue);
+        monitoringThread.Start();
+
+        // 主线程：接受用户的输入请求并添加到队列
+        Console.WriteLine("服务器正在运行。\r\n 输入 'b' 预订票。\r\n 输入 'c' 取消预订。\r\n 输入 'exit' 停止服务器。\r\n");
+
+        // 不断读取用户输入
+        while (true)
+        {
+            string? input = Console.ReadLine(); // 从控制台读取用户输入
+            if (input?.ToLower() == "exit") // 当输入 "exit" 时退出循环
+            {
+                break;
+            }
+
+            // 使用锁来确保线程安全地访问队列
+            lock (requestQueue)
+            {
+                requestQueue.Enqueue(input); // 将输入请求加入请求队列
+            }
+        }
+    }
+}
+```
+
+### 解析
+
+1. **使用 `readonly` 修饰**：
+   - `requestQueue` 和 `ticketsLock` 都是静态的且不会被重新分配，所以使用 `readonly` 修饰，确保在代码执行期间这些变量的引用不可变。
+   - `readonly` 适用于初始化后不再改变引用的变量，可以增加代码的安全性。
+
+2. **锁住队列 `requestQueue`**：
+   - 为了确保在多线程环境下 `requestQueue` 的安全操作，我们在访问队列的地方都加了锁，保证只有一个线程能同时读取或写入队列。特别是 `Dequeue` 操作（取出元素）和 `Enqueue` 操作（添加元素）都在锁范围内。
+   - 这样避免了可能的并发问题，比如多个线程同时取出或插入数据时导致的队列状态不一致。
+
+3. **锁对象优化**：
+   - `ticketsLock` 被声明为 `readonly`，因为我们只需确保这个锁对象本身不会被改变，而不是锁对象的内容。
+   - `ticketsLock` 用于控制 `availableTickets` 的操作，在多线程环境中避免了多个线程同时修改票数的冲突。
+
+### 总结
+
+通过这些改进，代码更加安全、高效，减少了线程访问冲突的风险。使用 `readonly` 可以提升代码的安全性，特别是在多线程场景下；合理的锁机制可以确保在多线程环境中安全地操作共享资源。
+
+在上述代码中，我们使用了 `private` 和 `static` 关键字来修饰类中的成员变量。下面是详细的解释，说明为什么这些关键字在这段代码中很重要：
+
+### 1. 为什么使用 `private`
+
+- **限制访问范围**：
+  - `private` 关键字用于限制变量的访问范围，仅允许在类内部使用这些变量。这是良好的封装实践，因为我们希望 `requestQueue`、`availableTickets` 和 `ticketsLock` 仅在 `Program` 类内部被访问和修改，外部代码无法直接更改这些变量。
+  - 在这段代码中，`availableTickets` 表示可用票数，`requestQueue` 存储用户的请求，而 `ticketsLock` 是用于同步票数操作的锁对象。这些变量都是与类的内部逻辑强相关的，且仅在类内部使用，将其设为 `private` 可以避免外部误操作，保护代码的完整性。
+
+- **增强安全性**：
+  - 使用 `private` 限制变量的访问，可以防止外部类或模块直接访问或篡改这些数据。比如，如果 `availableTickets` 允许外部访问或修改，可能会导致错误的数据状态，破坏了类内部逻辑的正确性。
+  
+### 2. 为什么使用 `static`
+
+在这段代码中，`Main` 方法、`ProcessBooking` 方法和 `MonitorQueue` 方法都是静态方法，出于以下原因，变量也需要定义为 `static`：
+
+- **在静态上下文中访问**：
+  - `Main` 是一个静态方法，在应用程序启动时首先运行。静态方法属于类本身，而不依赖于类的实例。因此，所有在 `Main` 方法中使用的变量或方法都必须是静态的。
+  - 如果 `availableTickets` 和 `ticketsLock` 不是 `static`，那么它们就不能在 `Main` 中直接访问，因为静态方法只能访问静态成员。
+
+- **全局共享数据**：
+  - 由于 `availableTickets`、`requestQueue` 和 `ticketsLock` 是全局共享的资源，在整个应用的生命周期中，它们的状态会被所有线程访问。`static` 确保这些变量在内存中只有一份拷贝，所有线程访问的是同一块内存中的同一变量。
+  - 例如，`availableTickets` 是所有线程都需要访问的票数信息，如果它不是静态的，每个线程可能会得到不同的票数拷贝，导致数据不同步和不一致。
+  
+- **单一实例的锁**：
+  - `ticketsLock` 用于控制对 `availableTickets` 的同步访问。`static` 确保只有一个 `ticketsLock` 实例，这样所有线程在访问 `availableTickets` 时都能使用同一个锁对象。
+  - 如果 `ticketsLock` 不是静态的，多个线程可能会创建多个锁对象，这样就无法确保对 `availableTickets` 的操作是线程安全的。
+
+### `private static readonly` 的组合使用
+
+在 `requestQueue` 和 `ticketsLock` 上使用 `private static readonly` 是一个良好的设计选择，原因如下：
+
+- **`readonly` 确保不可变引用**：
+  - `readonly` 使变量在初始化后无法被重新赋值，保证了 `requestQueue` 和 `ticketsLock` 的引用在程序运行期间不会改变。这样，队列和锁对象的引用在整个程序中始终是一致的，增强了代码的稳定性和安全性。
+  - `requestQueue` 和 `ticketsLock` 使用 `readonly` 确保了它们的引用不可变，但内容仍然可以被操作（如 `Enqueue` 和 `Dequeue` 操作或加锁操作）。
+
+- **`static` 与 `readonly` 组合**：
+  - `static` 和 `readonly` 的组合确保这些变量是类级别的，且其引用不可变，但内容可以动态改变。例如，我们可以往 `requestQueue` 中添加请求，或使用 `ticketsLock` 来加锁 `availableTickets` 的操作。
+  
+### 总结
+
+- **`private`**：防止外部访问，保护类的内部数据逻辑。
+- **`static`**：确保变量在类级别共享，适合需要在静态方法中访问的全局资源。
+- **`readonly`**：使变量引用不可变，保证在程序运行期间引用始终指向同一对象，避免错误的重新赋值。
+
+使用 `private static readonly` 修饰这些变量，使代码不仅在功能上满足需求，同时提升了代码的安全性、可读性和维护性。
