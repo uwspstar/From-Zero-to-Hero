@@ -22,7 +22,7 @@
 9. [Exclusive Lock](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/009.%20Exclusive%20Lock.md)
 10. Assignment: [Airplane Seats Booking System](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/010.%20Airplane%20Seats%20Booking%20System.md)
 11. [Using Monitor to Add Timeout for Locks](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/011.%20Using%20%60Monitor%60%20to%20Add%20Timeout%20for%20Locks.md)
-12. Using Mutex to Synchronize Across Processes
+12. [Using Mutex to Synchronize Across Processes](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/012.%20Using%20%60Mutex%60%20to%20Synchronize%20Across%20Processes.md)
 13. Reader and Writer Lock
 14. Using Semaphore to Limit Number of Threads
 15. Using AutoResetEvent for Signaling
