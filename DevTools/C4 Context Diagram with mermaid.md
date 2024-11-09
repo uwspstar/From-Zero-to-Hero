@@ -79,10 +79,10 @@ flowchart TB
     app[Configuration API]
     extCache[External Cache System]
 
-    app --> GlobalConfigurationCache : Reads/Writes Configuration
-    GlobalConfigurationCache --> CacheManager : Manages Cache
-    CacheManager --> CacheAdapter : Uses Adapter Pattern
-    CacheAdapter --> extCache : Interacts with External Cache
+    app -->|Reads/Writes Configuration| GlobalConfigurationCache
+    GlobalConfigurationCache -->|Manages Cache| CacheManager
+    CacheManager -->|Uses Adapter Pattern| CacheAdapter
+    CacheAdapter -->|Interacts with External Cache| extCache
 ```
 
 ### Explanation
