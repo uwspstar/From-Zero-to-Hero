@@ -36,7 +36,6 @@ This guide will walk you through setting up Visual Studio Code (VS Code) to crea
 3. **Write Mermaid Code for the Class Diagram**:
    - Use the Mermaid syntax to define classes, relationships, and methods. Below is an example based on the `GlobalConfigurationCache` class.
 
-   ```markdown
    ```mermaid
    classDiagram
        class GlobalConfigurationCache {
@@ -79,7 +78,6 @@ This guide will walk you through setting up Visual Studio Code (VS Code) to crea
 
        GlobalConfigurationCache --> AddMethod : calls
        GlobalConfigurationCache --> GetMethod : calls
-   ```
    ```
 
 4. **Preview the Diagram**:
