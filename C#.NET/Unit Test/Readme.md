@@ -3,6 +3,7 @@
 ---
 - [WCF unit testing](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Unit%20Test/WCF%20unit%20testing.md)
 - [Popular MSSQL Unit Test Frameworks](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Unit%20Test/Popular%20MSSQL%20Unit%20Test%20Frameworks.md)
+- [C# using NUnit](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Unit%20Test/C%23%20using%20NUnit.md)
 
 ---
 
