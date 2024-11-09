@@ -1,7 +1,7 @@
 ### xUnit vs NUnit vs MSTest
 
 ---
-- [WCT unit testing](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Unit%20Test/WCF%20unit%20testing.md)
+- [WCF unit testing](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Unit%20Test/WCF%20unit%20testing.md)
 
 ---
 
