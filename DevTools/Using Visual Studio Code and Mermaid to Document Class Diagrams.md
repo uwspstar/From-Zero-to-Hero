@@ -93,10 +93,11 @@ This guide will walk you through setting up Visual Studio Code (VS Code) to crea
   - Add attributes and methods inside curly braces `{}`.
 
   ```mermaid
-  class ExampleClass {
-      - int attribute
-      + void method()
-  }
+  classDiagram
+     class ExampleClass {
+         - int attribute
+         + void method()
+     }
   ```
 
 - **Relationships**:
@@ -104,7 +105,8 @@ This guide will walk you through setting up Visual Studio Code (VS Code) to crea
   - Use `: relationship name` after the arrow to label the relationship.
 
   ```mermaid
-  ClassA --> ClassB : uses
+  classDiagram
+     ClassA --> ClassB : uses
   ```
 
 - **Modifiers**:
@@ -122,12 +124,13 @@ Using the previous examples, here’s a step-by-step breakdown of how to documen
    - List the public methods `Add` and `Get` inside the class.
 
    ```mermaid
-   class GlobalConfigurationCache {
-       - ReaderWriterLockSlim _lock
-       - Dictionary~int, string~ _cache
-       + void Add(int key, string value)
-       + string? Get(int key)
-   }
+   classDiagram
+      class GlobalConfigurationCache {
+          - ReaderWriterLockSlim _lock
+          - Dictionary~int, string~ _cache
+          + void Add(int key, string value)
+          + string? Get(int key)
+      }
    ```
 
 2. **Define Supporting Classes**:
@@ -135,46 +138,49 @@ Using the previous examples, here’s a step-by-step breakdown of how to documen
    - Define `Dictionary<int, string>` with `TryGetValue` to represent cache retrieval.
 
    ```mermaid
-   class ReaderWriterLockSlim {
-       + EnterWriteLock()
-       + EnterReadLock()
-       + ExitWriteLock()
-       + ExitReadLock()
-   }
-
-   class Dictionary~int, string~ {
-       + TryGetValue(int key, string value) string?
-   }
+   classDiagram
+      class ReaderWriterLockSlim {
+          + EnterWriteLock()
+          + EnterReadLock()
+          + ExitWriteLock()
+          + ExitReadLock()
+      }
+   
+      class Dictionary~int, string~ {
+          + TryGetValue(int key, string value) string?
+      }
    ```
 
 3. **Add Relationships**:
    - Define that `GlobalConfigurationCache` uses `ReaderWriterLockSlim` and contains a `Dictionary<int, string>`.
 
    ```mermaid
-   GlobalConfigurationCache --> ReaderWriterLockSlim : uses
-   GlobalConfigurationCache --> Dictionary~int, string~ : contains
+   classDiagram
+      GlobalConfigurationCache --> ReaderWriterLockSlim : uses
+      GlobalConfigurationCache --> Dictionary~int, string~ : contains
    ```
 
 4. **Add Methods as Classes (Optional)**:
    - You can create separate classes like `AddMethod` and `GetMethod` to break down the logic further.
 
    ```mermaid
-   class AddMethod {
-       - bool lockAcquired
-       + EnterWriteLock()
-       + Add to _cache
-       + ExitWriteLock()
-   }
+   classDiagram
+      class AddMethod {
+          - bool lockAcquired
+          + EnterWriteLock()
+          + Add to _cache
+          + ExitWriteLock()
+      }
+   
+      class GetMethod {
+          - bool lockAcquired
+          + EnterReadLock()
+          + TryGetValue from _cache
+          + ExitReadLock()
+      }
 
-   class GetMethod {
-       - bool lockAcquired
-       + EnterReadLock()
-       + TryGetValue from _cache
-       + ExitReadLock()
-   }
-
-   GlobalConfigurationCache --> AddMethod : calls
-   GlobalConfigurationCache --> GetMethod : calls
+      GlobalConfigurationCache --> AddMethod : calls
+      GlobalConfigurationCache --> GetMethod : calls
    ```
 
 ---
