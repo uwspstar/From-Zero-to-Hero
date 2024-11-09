@@ -16,6 +16,7 @@ The **Context Diagram** shows the main system (`Configuration System`) and its i
 
 ```mermaid
 %% C4 Context Diagram %%
+sequenceDiagram
 flowchart TB
     subgraph SystemBoundary[Configuration System]
         system[Configuration Service]
