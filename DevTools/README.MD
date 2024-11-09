@@ -1,5 +1,12 @@
 ### Development Tools Overview 开发工具概览
 
+---
+
+- [Creating an IDE](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/DevTools/Creating%20an%20IDE.md)
+- [User Guide: Using Visual Studio Code and Mermaid to Document Class Diagrams](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/DevTools/Using%20Visual%20Studio%20Code%20and%20Mermaid%20to%20Document%20Class%20Diagrams.md)
+
+---
+
 In the modern development environment, utilizing the right tools can greatly enhance productivity and code quality. Here’s a comprehensive list of development tools categorized by their purpose:
 
 在现代开发环境中，使用合适的工具可以大大提高生产力和代码质量。以下是按用途分类的开发工具的全面列表：
