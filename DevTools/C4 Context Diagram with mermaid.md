@@ -50,10 +50,10 @@ flowchart TB
     user[Admin User]
     extCache[External Cache System]
 
-    user --> app : Uses
-    app --> cacheService : Calls
-    app --> db : Reads/Writes Configuration
-    cacheService --> extCache : Retrieves/Updates Cached Configurations
+    user -->|Uses| app
+    app -->|Calls| cacheService
+    app -->|Reads/Writes Configuration| db
+    cacheService -->|Retrieves/Updates Cached Configurations| extCache
 ```
 
 ### Explanation
