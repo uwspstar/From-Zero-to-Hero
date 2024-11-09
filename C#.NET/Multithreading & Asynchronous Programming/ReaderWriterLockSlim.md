@@ -1,3 +1,48 @@
+
+```mermaid
+classDiagram
+    class GlobalConfigurationCache {
+        - ReaderWriterLockSlim _lock
+        - Dictionary~int, string~ _cache
+        + void Add(int key, string value)
+        + string? Get(int key)
+    }
+
+    class ReaderWriterLockSlim {
+        + EnterWriteLock()
+        + EnterReadLock()
+        + ExitWriteLock()
+        + ExitReadLock()
+    }
+
+    class Dictionary~int, string~ {
+        + TryGetValue(int key, string value) string?
+    }
+
+    GlobalConfigurationCache --> ReaderWriterLockSlim : uses
+    GlobalConfigurationCache --> Dictionary~int, string~ : contains
+
+    GlobalConfigurationCache : + Add(int key, string value)
+    GlobalConfigurationCache : + Get(int key)
+
+    class AddMethod {
+        - bool lockAcquired
+        + EnterWriteLock()
+        + Add to _cache
+        + ExitWriteLock()
+    }
+
+    class GetMethod {
+        - bool lockAcquired
+        + EnterReadLock()
+        + TryGetValue from _cache
+        + ExitReadLock()
+    }
+
+    GlobalConfigurationCache --> AddMethod : calls
+    GlobalConfigurationCache --> GetMethod : calls
+```
+
 ```csharp
 using System;
 using System.Collections.Generic;
