@@ -1,4 +1,5 @@
-### 
+### C4 Context Diagram with mermaid
+
 The **C4 Model** provides a standardized way to document the architecture of software systems with four hierarchical diagram levels:
 
 1. **Context Diagram**: High-level view showing the system, external users, and systems it interacts with.
