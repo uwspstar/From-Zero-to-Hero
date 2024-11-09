@@ -24,8 +24,9 @@ flowchart TB
     user[Admin User]
     cache[External Cache System]
 
-    user --> system : Manages
-    system --> cache : Retrieves and Updates Configuration
+    user -->|Manages| system
+    system -->|Retrieves and Updates Configuration| cache
+
 ```
 
 ### Explanation
