@@ -1,6 +1,6 @@
 ### C# using NUnit
 
-Certainly! Here’s a quick guide on setting up a unit test in C# using **NUnit**, a popular testing framework with a rich set of features for writing, managing, and executing tests.
+Here’s a quick guide on setting up a unit test in C# using **NUnit**, a popular testing framework with a rich set of features for writing, managing, and executing tests.
 
 ### Step 1: Set Up Your Test Project
 1. **Open your C# project** in Visual Studio.
