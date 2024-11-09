@@ -4,7 +4,8 @@
 
 - [Creating an IDE](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/DevTools/Creating%20an%20IDE.md)
 - [User Guide: Using Visual Studio Code and Mermaid to Document Class Diagrams](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/DevTools/Using%20Visual%20Studio%20Code%20and%20Mermaid%20to%20Document%20Class%20Diagrams.md)
-
+- [C4 Context Diagram with mermaid](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/DevTools/C4%20Context%20Diagram%20with%20mermaid.md)
+- [User Guide: Using Mermaid Diagrams in Microsoft Loop](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/DevTools/Using%20Mermaid%20Diagrams%20in%20Microsoft%20Loop.md)
 ---
 
 In the modern development environment, utilizing the right tools can greatly enhance productivity and code quality. Here’s a comprehensive list of development tools categorized by their purpose:
