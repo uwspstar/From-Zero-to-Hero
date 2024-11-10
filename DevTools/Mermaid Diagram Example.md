@@ -3,6 +3,9 @@
 ```mermaid
 flowchart LR
 
+%% Components %%
+DB[(Database)]
+
 %% Colors %%
 linkStyle default stroke-width:2px
 classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff
