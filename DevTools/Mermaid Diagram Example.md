@@ -48,28 +48,29 @@ click P "https://www.notion.so/redgregory/db9274f912e1400a895d51030bc7e680?v=276
 
 ```mermaid
 graph TD
-    DB[(Database)] %% Database component %%
-    AP[API Gateway] %% API Gateway %%
-    SRV[Server] %% Server component %%
-    CLT[(Client)] %% Client component %%
-    CACHE((Cache)) %% Cache component %%
-    MQ[(Message Queue)] %% Message Queue %%
-    FILE[Filesystem] %% Filesystem %%
-    EXT[External System] %% External system %%
-    LB{Load Balancer} %% Load Balancer %%
-    AUTH[(Authentication Service)] %% Authentication Service %%
-    LOGS((Logging System)) %% Logging system %%
-    MON((Monitoring)) %% Monitoring system %%
-    CDN((Content Delivery Network)) %% CDN %%
-    WEB[Web Server] %% Web server %%
-    MAIL((Email Service)) %% Email service %%
-    ML[(Machine Learning Model)] %% Machine learning model %%
-    SSO[(Single Sign-On)] %% Single Sign-On service %%
-    DC{Data Center} %% Data Center %%
-    STORAGE((Object Storage)) %% Object Storage %%
-    AGENT[(Agent Service)] %% Agent service %%
-    NS{Namespace} %% Namespace %%
-    CONFIG[(Configuration Service)] %% Configuration service %%
-    API[(API Service)] %% API service %%
+    DB[(Database)]
+    AP[API Gateway]
+    SRV[Server]
+    CLT[(Client)]
+    CACHE((Cache))
+    MQ[(Message Queue))
+    FILE[Filesystem]
+    EXT[External System]
+    LB{Load Balancer}
+    AUTH[(Authentication Service)]
+    LOGS((Logging System))
+    MON((Monitoring))
+    CDN((Content Delivery Network))
+    WEB[Web Server]
+    MAIL((Email Service))
+    ML[(Machine Learning Model)]
+    SSO[(Single Sign-On)]
+    DC{Data Center}
+    STORAGE((Object Storage))
+    AGENT[(Agent Service)]
+    NS{Namespace}
+    CONFIG[(Configuration Service)]
+    API[(API Service)]
+
 
 ```
