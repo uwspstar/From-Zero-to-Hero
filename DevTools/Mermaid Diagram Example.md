@@ -111,6 +111,60 @@ click P "https://www.notion.so/redgregory/db9274f912e1400a895d51030bc7e680?v=276
 ```
 
 ---
+Here’s a sample web system architecture diagram using various Mermaid shapes to represent typical components and their relationships in a web system:
+
+```mermaid
+graph TD
+    CLT[Client] --> LB{{Load Balancer}}
+    LB --> WEB[Web Server]
+    LB --> CDN((Content Delivery Network))
+    WEB --> API[API Gateway]
+    API --> AUTH>Authentication Service]
+    API --> SRV([Application Server])
+    SRV --> DB[(Database)]
+    SRV --> CACHE((Cache))
+    SRV --> MQ[/Message Queue/]
+    SRV --> FILE[[Filesystem]]
+    DB --> LOGS((Logging System))
+    DB --> MON((Monitoring))
+    CDN --> STORAGE((Object Storage))
+    EXT[External System] --> API
+    AUTH --> SSO{{Single Sign-On}}
+```
+
+### Explanation of Each Component
+
+- **Client** (`CLT`): Represented as a basic **Rectangle** to show the client interacting with the system.
+- **Load Balancer** (`LB`): A **Hexagon**, as a central distribution point for incoming traffic.
+- **Web Server** (`WEB`): Shown as a **Rectangle** to represent the server handling HTTP requests.
+- **CDN** (`CDN`): A **Circle** for caching static content close to users.
+- **API Gateway** (`API`): A **Rectangle** for routing requests to services.
+- **Authentication Service** (`AUTH`): Represented with an **Asymmetrical Shape** to highlight its distinct role in security.
+- **Application Server** (`SRV`): A **Rectangle** to represent core application logic.
+- **Database** (`DB`): A **Cylinder** as a common symbol for data storage.
+- **Cache** (`CACHE`): An **Ellipse** for in-memory caching.
+- **Message Queue** (`MQ`): A **Parallelogram**, often used to handle asynchronous tasks.
+- **Filesystem** (`FILE`): A **Subroutine** shape, useful for additional storage.
+- **Logging System** (`LOGS`): A **Circle** for handling logs.
+- **Monitoring System** (`MON`): A **Circle** for tracking system health.
+- **Object Storage** (`STORAGE`): Used for large files, depicted as a **Cloud**.
+- **External System** (`EXT`): A **Rectangle** to represent integrations with external systems.
+- **Single Sign-On (SSO)**: A **Diamond** showing it as an authentication feature connecting to `AUTH`.
+
+### Flow and Connections
+
+- **Client** initiates a connection to the **Load Balancer**.
+- The **Load Balancer** distributes traffic to the **Web Server** or **CDN**.
+- **Web Server** communicates with the **API Gateway** for routing.
+- **API Gateway** routes requests to **Application Server** or **Authentication Service**.
+- **Application Server** interacts with the **Database**, **Cache**, **Message Queue**, and **Filesystem**.
+- **Database** connects to **Logging** and **Monitoring** systems for tracking and storage management.
+- **Object Storage** is linked to **CDN** for efficient content delivery.
+- **External System** may interact with the **API Gateway** for integrations.
+
+This layout represents a standard architecture for a web application, covering key components and relationships for scalability, caching, and storage.
+
+---
 
 ```mermaid
 graph TD
