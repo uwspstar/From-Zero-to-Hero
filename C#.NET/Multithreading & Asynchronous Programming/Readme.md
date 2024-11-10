@@ -28,8 +28,8 @@
 15. [Using AutoResetEvent for Signaling](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/015.%20Using%20%60AutoResetEvent%60%20for%20Signaling.md)
 16. [Using ManualResetEvent to Release Multiple Threads](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/016.%20Using%20%60ManualResetEvent%60%20to%20Release%20Multiple%20Threads.md)
 17. Assignment: [Two-Way Signaling in Producer-Consumer Scenario](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/017.%20Two-Way%20Signaling%20in%20Producer-Consumer%20Scenario.md)
-18. Thread Affinity
-19. Thread Safety
+18. [Thread Affinity](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/018.%20Thread%20Affinity.md)
+19. [Thread Safety](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/019.%20Thread%20Safety.md)
 20. Nested Locks and Deadlock
 21. Multithreading MISC
 22. Debugging Programs with Multiple Threads
