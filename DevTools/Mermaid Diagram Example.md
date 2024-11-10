@@ -214,3 +214,129 @@ graph TD
     CONFIG[(Configuration Service)]
     API[(API Service)]
 ```
+---
+
+Mermaid supports various diagram types beyond graphs and flowcharts. Here’s a list of other types you can use in Mermaid:
+
+1. **Sequence Diagram**  
+   - Used to represent interactions between entities (like users, systems, or services) in a time-ordered sequence.
+   - Example syntax:
+     ```mermaid
+     sequenceDiagram
+         participant User
+         participant Server
+         User ->> Server: Request
+         Server -->> User: Response
+     ```
+
+2. **Class Diagram**  
+   - Represents the structure of classes, their attributes, methods, and relationships (often used in object-oriented design).
+   - Example syntax:
+     ```mermaid
+     classDiagram
+         class Animal {
+             +String name
+             +int age
+             +makeSound()
+         }
+         class Dog {
+             +String breed
+             +bark()
+         }
+         Animal <|-- Dog
+     ```
+
+3. **Entity-Relationship Diagram (ERD)**  
+   - Shows relationships between data entities, typically for database design.
+   - Example syntax:
+     ```mermaid
+     erDiagram
+         CUSTOMER ||--o{ ORDER : places
+         CUSTOMER {
+             string name
+             string email
+         }
+         ORDER {
+             int id
+             date orderDate
+         }
+     ```
+
+4. **Gantt Chart**  
+   - Useful for project planning, scheduling, and task management.
+   - Example syntax:
+     ```mermaid
+     gantt
+         title Project Timeline
+         dateFormat  YYYY-MM-DD
+         section Project Planning
+         Task 1 :done,    des1, 2024-01-01, 2024-01-15
+         Task 2 :active,  des2, 2024-01-16, 2024-02-15
+     ```
+
+5. **State Diagram**  
+   - Represents the states and transitions within a system or process.
+   - Example syntax:
+     ```mermaid
+     stateDiagram-v2
+         [*] --> Idle
+         Idle --> Processing
+         Processing --> Completed
+         Processing --> Failed
+     ```
+
+6. **User Journey Diagram**  
+   - Maps a user’s journey through different stages and experiences in a product or service.
+   - Example syntax:
+     ```mermaid
+     journey
+         title User Onboarding Journey
+         section Sign Up
+           User : 5: Sign up on the platform
+           System : 3: Send confirmation email
+         section Profile Setup
+           User : 4: Complete profile details
+           System : 4: Verify user information
+     ```
+
+7. **Pie Chart**  
+   - A simple pie chart for displaying proportions.
+   - Example syntax:
+     ```mermaid
+     pie
+         title Project Allocation
+         "Development" : 60
+         "Marketing" : 20
+         "Sales" : 20
+     ```
+
+8. **Requirement Diagram**  
+   - Displays requirements and their relationships, useful in systems engineering.
+   - Example syntax:
+     ```mermaid
+     requirementDiagram
+         requirement req1 {
+             id: 1
+             text: The system shall be user-friendly
+         }
+         functionalRequirement req2 {
+             id: 2
+             text: The system shall have a login feature
+         }
+         req1 --> req2
+     ```
+
+9. **Timeline Diagram**  
+   - Depicts events along a timeline, useful for historical data or project milestones.
+   - Example syntax:
+     ```mermaid
+     timeline
+         title Product Development Timeline
+         section Conceptualization
+           Idea : 2024-01-01
+         section Development
+           Alpha : 2024-06-01
+           Beta : 2024-09-01
+     ```
+
+These types offer diverse ways to visualize data, interactions, processes, and planning, each serving different purposes across project management, system design, and data modeling.
