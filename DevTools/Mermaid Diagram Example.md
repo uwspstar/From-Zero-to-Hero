@@ -310,10 +310,10 @@ Mermaid supports various diagram types beyond graphs and flowcharts. Here’s a 
          "Sales" : 20
      ```
 
-8. **Requirement Diagram**  
+8. **Requirement Diagram (not support github yet)**  
    - Displays requirements and their relationships, useful in systems engineering.
    - Example syntax:
-     ```mermaid
+     ```text
         requirementDiagram
 
         requirement req1
@@ -323,7 +323,6 @@ Mermaid supports various diagram types beyond graphs and flowcharts. Here’s a 
         req2 : The system shall have a login feature
         
         req1 --> req2
-
      ```
 
 9. **Timeline Diagram**  
