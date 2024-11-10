@@ -27,7 +27,7 @@
 14. [Using Semaphore to Limit Number of Threads](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/014.%20Using%20%60Semaphore%60%20to%20Limit%20the%20Number%20of%20Threads.md)
 15. [Using AutoResetEvent for Signaling](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/015.%20Using%20%60AutoResetEvent%60%20for%20Signaling.md)
 16. [Using ManualResetEvent to Release Multiple Threads](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/016.%20Using%20%60ManualResetEvent%60%20to%20Release%20Multiple%20Threads.md)
-17. Assignment: Two-Way Signaling in Producer-Consumer Scenario
+17. Assignment: [Two-Way Signaling in Producer-Consumer Scenario](https://github.com/uwspstar/From-Zero-to-Hero/tree/main/C%23.NET/Multithreading%20&%20Asynchronous%20Programming)
 18. Thread Affinity
 19. Thread Safety
 20. Nested Locks and Deadlock
