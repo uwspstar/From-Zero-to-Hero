@@ -1,6 +1,19 @@
 ### Mermaid Diagram Examples
 
 ```mermaid
+graph TD
+    A[Square] --> B((Circle))
+    C[Rectangle] --> D((Round Edges))
+    E((Ellipse)) --> F>Asymmetrical Shape]
+    G{{Hexagon}} --> H[Trapezoid]
+    I>Rhombus] --> J((Cylinder))
+    K[/Parallelogram/] --> L[[Subroutine]]
+    M[/Database/] --> N{Diamond}
+    O((Cloud))
+```
+---
+
+```mermaid
 flowchart LR
 
 %% Colors %%
@@ -71,6 +84,9 @@ graph TD
     CACHE((Cache))
     MQ[(Message Queue)]
     FILE[Filesystem]
+```
+```mermaid
+graph TD
     EXT[External System]
     LB{Load Balancer}
     AUTH[(Authentication Service)]
@@ -79,6 +95,9 @@ graph TD
     CDN((Content Delivery Network))
     WEB[Web Server]
     MAIL((Email Service))
+```
+```mermaid
+graph TD
     ML[(Machine Learning Model)]
     SSO[(Single Sign-On)]
     DC{Data Center}
@@ -87,18 +106,4 @@ graph TD
     NS{Namespace}
     CONFIG[(Configuration Service)]
     API[(API Service)]
-```
-
-```mermaid
-graph TD
-    CLT(["<i class='fa fa-user'></i> Client"]) --> AP["<i class='fa fa-cloud'></i> API Gateway"]
-    AP --> SRV["<i class='fa fa-server'></i> Server"]
-    SRV --> DB["<i class='fa fa-database'></i> Database"]
-    SRV --> CACHE["<i class='fa fa-box-open'></i> Cache"]
-    SRV --> MQ["<i class='fa fa-envelope'></i> Message Queue"]
-    EXT["<i class='fa fa-external-link-alt'></i> External System"] --> LB{"<i class='fa fa-network-wired'></i> Load Balancer"}
-    LB --> SRV
-    AUTH["<i class='fa fa-lock'></i> Authentication Service"] --> AP
-    LOGS["<i class='fa fa-file-alt'></i> Logging System"] --> MON["<i class='fa fa-eye'></i> Monitoring"]
-    MON --> SRV
 ```
