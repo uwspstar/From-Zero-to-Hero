@@ -314,16 +314,14 @@ Mermaid supports various diagram types beyond graphs and flowcharts. Here’s a 
    - Displays requirements and their relationships, useful in systems engineering.
    - Example syntax:
      ```mermaid
-     requirementDiagram
-         requirement req1 {
-             id: 1
-             text: The system shall be user-friendly
-         }
-         functionalRequirement req2 {
-             id: 2
-             text: The system shall have a login feature
-         }
-         req1 --> req2
+        requirementDiagram
+        requirement req1
+        requirement req1: The system shall be user-friendly
+        
+        functionalRequirement req2
+        req2: The system shall have a login feature
+        
+        req1 --> req2
      ```
 
 9. **Timeline Diagram**  
