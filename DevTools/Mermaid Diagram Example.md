@@ -315,13 +315,15 @@ Mermaid supports various diagram types beyond graphs and flowcharts. Here’s a 
    - Example syntax:
      ```mermaid
         requirementDiagram
+
         requirement req1
-        requirement req1: The system shall be user-friendly
+        req1 : The system shall be user-friendly
         
-        functionalRequirement req2
-        req2: The system shall have a login feature
+        requirement req2
+        req2 : The system shall have a login feature
         
         req1 --> req2
+
      ```
 
 9. **Timeline Diagram**  
