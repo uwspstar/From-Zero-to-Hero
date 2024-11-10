@@ -47,7 +47,7 @@ click P "https://www.notion.so/redgregory/db9274f912e1400a895d51030bc7e680?v=276
 ---
 
 ```mermaid
-graph TB
+graph TD
     DB[(Database)]
     AP[API Gateway]
     SRV[Server]
