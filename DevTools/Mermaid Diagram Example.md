@@ -1,5 +1,7 @@
 ### Mermaid Diagram Examples
 
+In Mermaid, you can use various shapes to represent different components or nodes. Here’s a list of the basic shapes available in Mermaid and how to create them:
+
 ```mermaid
 graph TD
     A[Square] --> B((Circle))
@@ -14,6 +16,54 @@ graph TD
     M[/Database/] --> N{Diamond}
     O((Cloud))
 ```
+
+### Explanation of Each Shape
+
+1. **Square**: Defined with `[Label]`. 
+    - Example: `A[Square]`
+
+2. **Circle**: Defined with `((Label))`.
+    - Example: `B((Circle))`
+
+3. **Rectangle**: Similar to square but often used interchangeably.
+    - Example: `C[Rectangle]`
+
+4. **Round Edges (Rounded Rectangle)**: Defined with `([Label])`.
+    - Example: `D([Round Edges])`
+
+5. **Ellipse**: Also uses rounded parentheses, creating an elliptical shape.
+    - Example: `E((Ellipse))`
+
+6. **Asymmetrical Shape**: Defined with `>Label]` (triangle on one side).
+    - Example: `F>Asymmetrical Shape]`
+
+7. **Hexagon**: Defined with `{{Label}}`.
+    - Example: `G{{Hexagon}}`
+
+8. **Trapezoid**: Mermaid doesn’t have a direct trapezoid shape, but customizations can be added by creating subgraphs or groups.
+
+9. **Rhombus (Decision)**: Defined with `{Label}` for a diamond shape, often used for decisions.
+    - Example: `N{Diamond}`
+
+10. **Cylinder**: Often used for databases or storage.
+    - Example: `J((Cylinder))`
+
+11. **Parallelogram**: Created using `[/Label/]` or `[\Label\]`.
+    - Example: `K[/Parallelogram/]`
+
+12. **Subroutine**: Represented by double square brackets `[[Label]]`.
+    - Example: `L[[Subroutine]]`
+
+13. **Database**: Displayed as a barrel shape.
+    - Example: `M[/Database/]`
+
+14. **Cloud**: Simulated by using rounded brackets for a cloud-like shape.
+    - Example: `O((Cloud))`
+
+### Usage in Diagrams
+
+Each shape has specific uses and can be used to represent different types of nodes or components in your diagram, enhancing readability and clarity. Use them according to your needs for representing various components in architectural, workflow, or process diagrams.
+
 ---
 
 ```mermaid
