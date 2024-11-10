@@ -48,6 +48,22 @@ click P "https://www.notion.so/redgregory/db9274f912e1400a895d51030bc7e680?v=276
 
 ```mermaid
 graph TD
+    CLT[(Client)] --> AP[API Gateway]
+    AP --> SRV[Server]
+    SRV --> DB[(Database)]
+    SRV --> CACHE((Cache))
+    SRV --> MQ[(Message Queue)]
+    EXT[External System] --> LB{Load Balancer}
+    LB --> SRV
+    AUTH[(Authentication Service)] --> AP
+    LOGS((Logging System)) --> MON((Monitoring))
+    MON --> SRV
+```
+
+---
+
+```mermaid
+graph TD
     DB[(Database)]
     AP[API Gateway]
     SRV[Server]
