@@ -42,6 +42,4 @@ linkStyle 4 stroke:magenta
 
 %% Clickable Links %%
 click P "https://www.notion.so/redgregory/db9274f912e1400a895d51030bc7e680?v=2764569801174438898a704b66599c22"
-click G "https://www.notion.so/redgregory/ee82ff93b486428b97531600b1d0e21e?v=e534b37ca0e344afbd0cfc7e0a45f8a2"
-click PT "https://www.notion.so/redgregory/db9274f912e1400a895d51030bc7e680?v=48f5444da5d04aecb3b4883094956db3"
 ```
