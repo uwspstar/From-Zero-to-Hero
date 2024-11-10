@@ -53,7 +53,7 @@ graph TD
     SRV[Server]
     CLT[(Client)]
     CACHE((Cache))
-    MQ[(Message Queue))
+    MQ[(Message Queue)]
     FILE[Filesystem]
     EXT[External System]
     LB{Load Balancer}
@@ -71,6 +71,4 @@ graph TD
     NS{Namespace}
     CONFIG[(Configuration Service)]
     API[(API Service)]
-
-
 ```
