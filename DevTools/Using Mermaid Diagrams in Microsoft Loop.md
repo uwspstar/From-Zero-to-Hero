@@ -1,5 +1,7 @@
 ### User Guide: Using Mermaid Diagrams in Microsoft Loop
-
+---
+- [Mermaid tutorial](https://www.youtube.com/watch?v=-XV1JBfhgWo&list=PLw5h0DiJ-9PC49ItLKBQlWSMH1zolOCXS)
+---
 Mermaid syntax in Microsoft Loop enables you to create diagrams, flowcharts, and other visuals directly in your collaborative documents. Follow this guide to get started with Mermaid in Loop.
 
 ---
