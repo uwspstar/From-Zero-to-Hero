@@ -3,9 +3,6 @@
 ```mermaid
 flowchart LR
 
-%% Components %%
-DB[(Database)]
-
 %% Colors %%
 linkStyle default stroke-width:2px
 classDef blue fill:#2374f7,stroke:#000,stroke-width:2px,color:#fff
@@ -45,4 +42,33 @@ linkStyle 4 stroke:magenta
 
 %% Clickable Links %%
 click P "https://www.notion.so/redgregory/db9274f912e1400a895d51030bc7e680?v=2764569801174438898a704b66599c22"
+```
+
+---
+
+```mermaid
+%% Components %%
+DB[(Database)] %% Database component %%
+AP[API Gateway] %% API Gateway %%
+SRV[Server] %% Server component %%
+CLT[(Client)] %% Client component %%
+CACHE((Cache)) %% Cache component %%
+MQ[(Message Queue)] %% Message Queue %%
+FILE[Filesystem] %% Filesystem %%
+EXT[External System] %% External system %%
+LB{Load Balancer} %% Load Balancer %%
+AUTH[(Authentication Service)] %% Authentication Service %%
+LOGS((Logging System)) %% Logging system %%
+MON((Monitoring)) %% Monitoring system %%
+CDN((Content Delivery Network)) %% CDN %%
+WEB[Web Server] %% Web server %%
+MAIL((Email Service)) %% Email service %%
+ML[(Machine Learning Model)] %% Machine learning model %%
+SSO[(Single Sign-On)] %% Single Sign-On service %%
+DC{Data Center} %% Data Center %%
+STORAGE((Object Storage)) %% Object Storage %%
+AGENT[(Agent Service)] %% Agent service %%
+NS{Namespace} %% Namespace %%
+CONFIG[(Configuration Service)] %% Configuration service %%
+API[(API Service)] %% API service %%
 ```
