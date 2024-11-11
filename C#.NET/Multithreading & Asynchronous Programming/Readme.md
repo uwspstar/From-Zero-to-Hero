@@ -31,10 +31,10 @@
 18. [Thread Affinity](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/018.%20Thread%20Affinity.md)
 19. [Thread Safety](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/019.%20Thread%20Safety.md)
 20. [Nested Locks and Deadlock](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/020.%20Nested%20Locks%20and%20Deadlock.md)
-21. Multithreading MISC
-22. Debugging Programs with Multiple Threads
-23. States of a Thread
-24. Make Thread Wait for Some Time
+21. [Multithreading MISC](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/021.%20Multithreading%20Miscellaneous%20Topics.md)
+22. [Debugging Programs with Multiple Threads](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/022.%20Debugging%20Programs%20with%20Multiple%20Threads.md)
+23. [States of a Thread](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/023.%20States%20of%20a%20Thread%3A%20Understanding%20Thread%20Lifecycle.md)
+24. [Make Thread Wait for Some Time](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/024.%20%60Thread.SpinWait%60%20vs%20%60Thread.Sleep%60%20vs%20%60Thread.SpinUntil%60.md)
 25. Returning Results from a Thread
 26. Canceling a Thread
 27. Thread Pool
