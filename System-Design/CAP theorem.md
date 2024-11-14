@@ -13,7 +13,7 @@ flowchart
     CAP --> PartitionTolerance[Partition Tolerance P]
 
     subgraph TradeOffs[CAP Trade-offs]
-        direction LR
+        direction TD
         CA[CA System] -->|Consistency & Availability| CAP
         CA -.-> Consistency
         CA -.-> Availability
