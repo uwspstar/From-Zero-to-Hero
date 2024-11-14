@@ -3,6 +3,29 @@
 Here's a comprehensive explanation of the CAP theorem, its trade-offs, a flowchart diagram, and C# code examples to represent the different system designs (CA, CP, and AP) based on CAP principles.
 
 ---
+```mermaid
+flowchart TB
+    subgraph CAP[CAP Theorem]
+        Consistency["Consistency C\nAll clients see the same view of data,\neven right after update or delete"]
+        Availability["Availability A\nAll clients can find a replica of data,\neven in case of partial node failures"]
+        PartitionTolerance["Partitioning P\nThe system continues to work as expected,\neven in presence of partial network failure"]
+
+        style Consistency fill:#A3D5A5,stroke:#333,stroke-width:1px
+        style Availability fill:#A5CFE2,stroke:#333,stroke-width:1px
+        style PartitionTolerance fill:#F2D1A0,stroke:#333,stroke-width:1px
+    end
+
+    CA[CA System: Consistency & Availability\nNo Partition Tolerance] 
+    CP[CP System: Consistency & Partition Tolerance\nNo High Availability]
+    AP[AP System: Availability & Partition Tolerance\nNo Strong Consistency]
+
+    Consistency --> CA
+    Availability --> CA
+    Consistency --> CP
+    PartitionTolerance --> CP
+    Availability --> AP
+    PartitionTolerance --> AP
+```
 
 ### Detailed Explanation of Each Component in CAP Theorem
 
