@@ -7,29 +7,11 @@ Here's a comprehensive explanation of the CAP theorem, its trade-offs, a flowcha
 ### CAP Theorem Flowchart (Corrected)
 
 ```mermaid
-piechart
-    CAP[CAP Theorem] --> Consistency[Consistency C]
-    CAP --> Availability[Availability A]
-    CAP --> PartitionTolerance[Partition Tolerance P]
-
-    subgraph TradeOffs[CAP Trade-offs]
-        CA[CA System] -->|Consistency & Availability| CAP
-        CA -.-> Consistency
-        CA -.-> Availability
-        CP[CP System] -->|Consistency & Partition Tolerance| CAP
-        CP -.-> Consistency
-        CP -.-> PartitionTolerance
-        AP[AP System] -->|Availability & Partition Tolerance| CAP
-        AP -.-> Availability
-        AP -.-> PartitionTolerance
-    end
-
-    Consistency --> CA
-    Consistency --> CP
-    Availability --> CA
-    Availability --> AP
-    PartitionTolerance --> CP
-    PartitionTolerance --> AP
+pie
+    title CAP Theorem Components
+    "Consistency (C)" : 33.33
+    "Availability (A)" : 33.33
+    "Partition Tolerance (P)" : 33.33
 ```
 
 ---
