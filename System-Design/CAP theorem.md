@@ -4,18 +4,6 @@ Here's a comprehensive explanation of the CAP theorem, its trade-offs, a flowcha
 
 ---
 
-### CAP Theorem Flowchart (Corrected)
-
-```mermaid
-pie
-    title CAP Theorem Components
-    "Consistency (C)" : 33.33
-    "Availability (A)" : 33.33
-    "Partition Tolerance (P)" : 33.33
-```
-
----
-
 ### Detailed Explanation of Each Component in CAP Theorem
 
 The CAP theorem, or Brewer's theorem, posits that a distributed data system can only provide two out of three guarantees—Consistency, Availability, and Partition Tolerance—simultaneously.
