@@ -15,15 +15,13 @@ flowchart TD
     subgraph TradeOffs[CAP Trade-offs]
         direction LR
         CA[CA System] -->|Consistency & Availability| CAP
-        CA -.->|No Partition Tolerance| Consistency
+        CA -.-> Consistency
         CA -.-> Availability
-
         CP[CP System] -->|Consistency & Partition Tolerance| CAP
-        CP -.->|No High Availability| Consistency
+        CP -.-> Consistency
         CP -.-> PartitionTolerance
-
         AP[AP System] -->|Availability & Partition Tolerance| CAP
-        AP -.->|No Strong Consistency| Availability
+        AP -.-> Availability
         AP -.-> PartitionTolerance
     end
 
