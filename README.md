@@ -5,8 +5,11 @@ From zero to hero: A newbie coding journey
 
 ### System Design
 -  bytebytego https://bytebytego.com/
+-  https://github.com/ByteByteGoHq/system-design-101?tab=readme-ov-file
+  
 ### Code Interview
 - neetcode https://neetcode.io/
+  
 ### AI
 - deeplearning https://www.deeplearning.ai/
 
