@@ -7,7 +7,7 @@ Here's a comprehensive explanation of the CAP theorem, its trade-offs, a flowcha
 ### CAP Theorem Flowchart (Corrected)
 
 ```mermaid
-flowchart
+piechart
     CAP[CAP Theorem] --> Consistency[Consistency C]
     CAP --> Availability[Availability A]
     CAP --> PartitionTolerance[Partition Tolerance P]
