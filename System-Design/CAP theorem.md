@@ -8,9 +8,9 @@ Here's a comprehensive explanation of the CAP theorem, its trade-offs, a flowcha
 
 ```mermaid
 flowchart TD
-    CAP[CAP Theorem] --> Consistency[Consistency (C)]
-    CAP --> Availability[Availability (A)]
-    CAP --> PartitionTolerance[Partition Tolerance (P)]
+    CAP[CAP Theorem] --> Consistency[Consistency C]
+    CAP --> Availability[Availability A]
+    CAP --> PartitionTolerance[Partition Tolerance P]
 
     subgraph TradeOffs[CAP Trade-offs]
         direction LR
