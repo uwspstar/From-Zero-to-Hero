@@ -45,7 +45,7 @@
 31. [Basic Syntax of Using Task](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/031.%20Basic%20Syntax%20of%20Using%20Task.md)
 32. [Task vs. Thread](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/032.%20Task%20vs.%20Thread.md)
 33. [Task Uses Thread Pool by Default](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/033.%20Task%20Uses%20Thread%20Pool%20by%20Default.md)
-34. Returning Result from Task
+34. [Returning Result from Task](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/034.%20Returning%20Result%20from%20Task.md)
 35. Task Continuation: Wait, WaitAll, Result
 36. Task Continuation: ContinueWith
 37. Task Continuation: WhenAll, WhenAny
