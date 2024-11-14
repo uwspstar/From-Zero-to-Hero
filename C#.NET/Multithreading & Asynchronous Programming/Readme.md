@@ -41,7 +41,7 @@
 27. [Thread Pool](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/027.%20Thread%20Pool.md)
 28. [Exception Handling in Threads](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/028.%20Exception%20Handling%20in%20Threads.md)
 29. [Task-Based Asynchronous Programming](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20&%20Asynchronous%20Programming/029.%20Task-Based%20Asynchronous%20Programming.md)
-30. Multithreading vs. Asynchronous Programming
+30. [Multithreading vs. Asynchronous Programming](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/030.%20Multithreading%20vs.%20Asynchronous%20Programming.md)
 31. Basic Syntax of Using Task
 32. Task vs. Thread
 33. Task Uses Thread Pool by Default
