@@ -277,11 +277,10 @@ Developing and implementing an effective API usage strategy is critical for opti
     app.listen(3000, () => console.log('Server started on port 3000'));
     ```
 
-### Complete Markdown Diagram
-### 完整的Markdown图表
+### Complete Diagram
 
 ```mermaid
-graph TD
+graph LR
     A[Application Layer] -->|HTTP, FTP, SMTP| A1[Provides network services directly to end-user applications]
     B[Presentation Layer] -->|SSL/TLS, JPEG| B1[Translates data formats between the application and the network]
     C[Session Layer] -->|NetBIOS, PPTP| C1[Manages sessions and controls connections between computers]
