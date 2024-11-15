@@ -158,6 +158,179 @@ By following these steps, you can easily use BenchmarkDotNet to analyze the perf
 
 ---
 
+### Key BenchmarkDotNet Metrics Explained in English
+
+Below is a detailed explanation of the key **BenchmarkDotNet** metrics, including **Mean**, **Median**, **StdDev**, and **GC Collections**. Examples are provided to clarify their meaning.
+
+---
+
+### **1. Mean (Average Execution Time)**
+
+#### **Definition**
+- **Mean** is the arithmetic average of all recorded execution times for a method.
+- It represents the overall performance level and is useful for comparing the efficiency of different methods.
+
+#### **Example**
+Suppose a method runs 5 times with execution times: `5 ms, 6 ms, 7 ms, 8 ms, 9 ms`.  
+The average (**Mean**) is:
+\[
+\text{Mean} = \frac{5 + 6 + 7 + 8 + 9}{5} = 7 \, \text{ms}
+\]
+
+#### **Sample Code**
+```csharp
+[Benchmark]
+public void SampleMean()
+{
+    int result = 0;
+    for (int i = 0; i < 10000; i++)
+        result += i;
+}
+```
+
+#### **Output Explanation**
+```plaintext
+Mean = 7.000 ms
+```
+
+This indicates that the `SampleMean` method takes an average of 7 milliseconds per run.
+
+---
+
+### **2. Median (Middle Execution Time)**
+
+#### **Definition**
+- **Median** is the middle value when all execution times are sorted in ascending order.
+- It is less affected by outliers, making it a more reliable representation of central tendency.
+
+#### **Example**
+Execution times: `5 ms, 6 ms, 7 ms, 8 ms, 50 ms` (where 50 ms is an outlier).  
+After sorting: `5 ms, 6 ms, 7 ms, 8 ms, 50 ms`.  
+The **Median** is **7 ms**, while the **Mean** would be **15.2 ms**, making the **Median** a better indicator of typical performance.
+
+#### **Sample Code**
+```csharp
+[Benchmark]
+public void SampleMedian()
+{
+    int result = 0;
+    for (int i = 0; i < 5000; i++)
+        result += i * 2; // Slightly simpler operation
+}
+```
+
+#### **Output Explanation**
+```plaintext
+Median = 7.000 ms
+```
+
+This shows that the method's typical execution time is 7 milliseconds, unaffected by any outliers.
+
+---
+
+### **3. StdDev (Standard Deviation)**
+
+#### **Definition**
+- **StdDev** (Standard Deviation) measures how much execution times deviate from the mean.
+- A smaller value indicates more consistent performance.
+
+#### **Example**
+- Execution times: `5 ms, 5 ms, 6 ms, 6 ms, 7 ms` → Small **StdDev** = Stable performance.
+- Execution times: `1 ms, 5 ms, 10 ms, 20 ms, 50 ms` → Large **StdDev** = Highly variable performance.
+
+#### **Formula**
+The standard deviation is calculated as:
+\[
+\text{StdDev} = \sqrt{\frac{\sum (x_i - \text{Mean})^2}{N}}
+\]
+
+#### **Sample Code**
+```csharp
+[Benchmark]
+public void SampleStdDev()
+{
+    Random random = new Random();
+    int result = 0;
+    for (int i = 0; i < 1000; i++)
+        result += random.Next(1, 100); // Introduces variability
+}
+```
+
+#### **Output Explanation**
+```plaintext
+StdDev = 0.500 ms
+```
+
+- A smaller **StdDev** indicates more consistent performance across multiple runs.
+
+---
+
+### **4. GC Collections (Garbage Collection Counts)**
+
+#### **Definition**
+- **GC Collections** shows how many times the garbage collector was triggered to free up memory.
+- There are three generations in the .NET Garbage Collector:
+  - **Gen0**: Short-lived objects.
+  - **Gen1**: Medium-lived objects.
+  - **Gen2**: Long-lived objects (e.g., global variables).
+
+#### **Gen0** (Short-Lived Object Collection)
+- **Gen0** collects temporary objects, such as those created inside loops.
+
+#### **Gen1 and Gen2** (Medium- and Long-Lived Object Collection)
+- **Gen1**: Reclaims medium-lived objects like class instances.
+- **Gen2**: Handles long-lived objects. These collections are expensive and less frequent.
+
+#### **Sample Code**
+```csharp
+[Benchmark]
+public void SampleGC()
+{
+    List<int> numbers = new List<int>();
+    for (int i = 0; i < 10000; i++)
+        numbers.Add(i); // Creates many temporary objects
+}
+```
+
+#### **Output Explanation**
+```plaintext
+GC Collections - Gen0: 5, Gen1: 1, Gen2: 0
+```
+
+- **Gen0: 5**: Temporary objects (e.g., `numbers`) were collected 5 times.
+- **Gen1: 1**: Medium-lived objects were collected once.
+- **Gen2: 0**: No long-lived objects were collected.
+
+---
+
+### **Consolidated Sample Output**
+
+Here is a consolidated sample output:
+
+```plaintext
+| Method         | Mean        | Median      | StdDev   | Gen0  | Gen1 | Gen2 |
+|----------------|------------:|------------:|---------:|------:|-----:|-----:|
+| SampleMean     | 7.000 ms    | 7.000 ms    | 0.500 ms |  5    |  1   |  0   |
+| SampleMedian   | 7.000 ms    | 7.000 ms    | 0.300 ms |  3    |  1   |  0   |
+| SampleStdDev   | 15.000 ms   | 10.000 ms   | 5.000 ms |  8    |  2   |  1   |
+| SampleGC       | 10.000 ms   | 10.000 ms   | 0.500 ms |  10   |  2   |  0   |
+```
+
+---
+
+### **Summary**
+
+- **Mean (Average Execution Time)**: Reflects overall performance level.
+- **Median (Middle Value)**: Less affected by outliers, representing typical performance better.
+- **StdDev (Standard Deviation)**: Indicates consistency; smaller values are better.
+- **GC Collections**:
+  - **Gen0**: High frequency but low cost for short-lived objects.
+  - **Gen1 and Gen2**: Lower frequency but higher cost for medium- and long-lived objects.
+
+By analyzing these metrics, you can comprehensively evaluate the performance and memory management efficiency of your code. This helps identify bottlenecks and areas for optimization.
+
+---
+
 ### **Using BenchmarkDotNet for Performance Optimization**
 
 To complete the tutorial, let’s explore how to use the **BenchmarkDotNet metrics**—**Mean**, **Median**, **StdDev**, and **GC Collections**—to optimize the code systematically. This involves identifying performance bottlenecks and applying strategies for improvement.
