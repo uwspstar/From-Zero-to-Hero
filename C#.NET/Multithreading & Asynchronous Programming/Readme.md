@@ -57,8 +57,8 @@
 43. [Overview of Async & Await](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/043.%20Overview%20of%20Async%20%26%20Await.md)
 44. [Basic Syntax of Async and Await](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/044.%20Basic%20Syntax%20of%20Async%20and%20Await.md)
 45. [Which Thread is Used in Async](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/045.%20Which%20Thread%20is%20Used%20in%20Async.md)
-46. Continuation After Returning Value
-47. Exception Handling with Async and Await
+46. [Continuation After Returning Value](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/046.%20Continuation%20After%20Returning%20Value.md)
+47. [Exception Handling with Async and Await](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/047.%20Exception%20Handling%20with%20Async%20and%20Await.md)
 48. Await and Synchronization Context
 49. What Await Does
 50. Parallel Loops
