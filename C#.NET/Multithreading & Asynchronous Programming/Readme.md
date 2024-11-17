@@ -47,12 +47,12 @@
 33. [Task Uses Thread Pool by Default](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/033.%20Task%20Uses%20Thread%20Pool%20by%20Default.md)
 34. [Returning Result from Task](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/034.%20Returning%20Result%20from%20Task.md)
 35. [Task Continuation: Wait, WaitAll, Result](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/035.%20Task%20Continuation%20in%20C%23%3A%20%60Wait%60%2C%20%60WaitAll%60%2C%20%60Result%60.md)
-36. Task Continuation: ContinueWith
-37. Task Continuation: WhenAll, WhenAny
-38. Task Continuation: Continuation Chain & Unwrap
-39. Exception Handling in Tasks
-40. Tasks Synchronization
-41. Task Cancelation
+36. [Task Continuation: ContinueWith](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/036.%20Task%20Continuation%3A%20%60ContinueWith%60.md)
+37. [Task Continuation: WhenAll, WhenAny](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/037.%20Task%20Continuation%3A%20%60Task.WhenAll%60%20and%20%60Task.WhenAny%60.md)
+38. [Task Continuation: Continuation Chain & Unwrap](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/038.%20Continuation%20Chain%20and%20Unwrap.md)
+39. [Exception Handling in Tasks](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/039.%20Exception%20Handling%20in%20Tasks%20in%20C%23.md)
+40. [Tasks Synchronization](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/040.%20Task%20Synchronization%20in%20C%23.md)
+41. [Task Cancelation](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/041.%20Task%20Cancellation%20in%20C%23.md)
 42. Async and Await
 43. Overview of Async & Await
 44. Basic Syntax of Async and Await
