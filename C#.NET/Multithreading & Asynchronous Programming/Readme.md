@@ -53,10 +53,10 @@
 39. [Exception Handling in Tasks](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/039.%20Exception%20Handling%20in%20Tasks%20in%20C%23.md)
 40. [Tasks Synchronization](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/040.%20Task%20Synchronization%20in%20C%23.md)
 41. [Task Cancelation](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/041.%20Task%20Cancellation%20in%20C%23.md)
-42. Async and Await
-43. Overview of Async & Await
-44. Basic Syntax of Async and Await
-45. Which Thread is Used in Async
+42. [Async and Await](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/042.%20Understanding%20%60async%60%20and%20%60await%60%20in%20C%23.md)
+43. [Overview of Async & Await](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/043.%20Overview%20of%20Async%20%26%20Await.md)
+44. [Basic Syntax of Async and Await](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/044.%20Basic%20Syntax%20of%20Async%20and%20Await.md)
+45. [Which Thread is Used in Async](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/045.%20Which%20Thread%20is%20Used%20in%20Async.md)
 46. Continuation After Returning Value
 47. Exception Handling with Async and Await
 48. Await and Synchronization Context
