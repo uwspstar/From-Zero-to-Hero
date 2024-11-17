@@ -64,8 +64,8 @@
 47. [Exception Handling with Async and Await](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/047.%20Exception%20Handling%20with%20Async%20and%20Await.md)
 48. [Await and Synchronization Context](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/048.%20Await%20and%20Synchronization%20Context.md)
 49. [What Await Does](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/049.%20What%20Await%20Does.md)
-50. Parallel Loops
-51. Parallel Loops Overview and Basic Syntax
+50. [Parallel Loops](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/050.%20Parallel%20Loops.md)
+51. [Parallel Loops Overview and Basic Syntax](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/051.%20Parallel%20Loops%20Overview%20and%20Basic%20Syntax.md)
 52. Behind the Scenes of Parallel Loops
 53. Exception Handling in Parallel Loops
 54. Stop and Break in Parallel Loops
