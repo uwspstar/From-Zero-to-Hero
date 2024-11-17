@@ -1,4 +1,4 @@
-### the HTTP request and response handling process:
+### HTTP request and response handling process:
 
 ```mermaid
 sequenceDiagram
