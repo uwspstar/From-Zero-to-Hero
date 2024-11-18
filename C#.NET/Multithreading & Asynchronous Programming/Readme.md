@@ -9,6 +9,7 @@
 - [Why `using` Doesn’t Work with `lock` and `Monitor`](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/Why%20%60using%60%20Doesn%E2%80%99t%20Work%20with%20%60lock%60%20and%20%60Monitor%60.md)
 - [HTTP request and response handling process](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/HTTP%20request%20and%20response%20handling%20process.md)
 - [Why and How to Use ConfigureAwait(false) in C#](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/Why%20and%20How%20to%20Use%20%60ConfigureAwait(false)%60%20in%20C%23.md)
+- [Why and How TPL Uses ThreadPool and Work-Stealing Algorithm](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/Why%20and%20How%20TPL%20Uses%20ThreadPool%20and%20Work-Stealing%20Algorithm.md)
 
 
 ---
@@ -66,14 +67,14 @@
 49. [What Await Does](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/049.%20What%20Await%20Does.md)
 50. [Parallel Loops](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/050.%20Parallel%20Loops.md)
 51. [Parallel Loops Overview and Basic Syntax](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/051.%20Parallel%20Loops%20Overview%20and%20Basic%20Syntax.md)
-52. Behind the Scenes of Parallel Loops
-53. Exception Handling in Parallel Loops
-54. Stop and Break in Parallel Loops
-55. ParallelLoopResult
-56. Cancelation in Parallel Loops
-57. Thread Local Storage
-58. Performance Considerations
-59. PLINQ (Parallel LINQ)
+52. [Behind the Scenes of Parallel Loops](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/052.%20Behind%20the%20Scenes%20of%20Parallel%20Loops.md)
+53. [Exception Handling in Parallel Loops](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/053.%20Exception%20Handling%20in%20Parallel%20Loops.md)
+54. [Stop and Break in Parallel Loops](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/054.%20Stop%20and%20Break%20in%20Parallel%20Loops.md)
+55. [ParallelLoopResult](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/055.%20ParallelLoopResult.md)
+56. [Cancelation in Parallel Loops](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/056.%20Cancelation%20in%20Parallel%20Loops.md)
+57. [Thread Local Storage](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/057.%20Thread%20Local%20Storage%20(TLS)%20in%20C%23.md)
+58. [Performance Considerations](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20&%20Asynchronous%20Programming/058.%20Performance%20Considerations%20in%20C%23.md)
+59. [PLINQ (Parallel LINQ)](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20&%20Asynchronous%20Programming/059.%20PLINQ%20(Parallel%20LINQ)%20in%20C%23.md)
 60. Basics of PLINQ
 61. Producer, Consumer, and Buffer in PLINQ
 62. `foreach` vs. `ForAll` in PLINQ
