@@ -112,12 +112,6 @@ This diagram visually explains the interactions between components during a Webh
 
 ---
 
-Here’s the **C# code implementation** with **line-by-line explanations inside the code**:
-
----
-
-### **C# Code with Embedded Explanations**
-
 ```csharp
 // Import necessary namespaces for HTTP operations and JSON serialization
 using System;
