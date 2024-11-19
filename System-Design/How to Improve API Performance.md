@@ -46,49 +46,47 @@ The following are five common techniques to optimize API performance and their e
 
 ### Sequence Diagram for Improving API Performance
 
-The diagram below illustrates these techniques step by step, with flow numbers for clarity.
-
 ```mermaid
 sequenceDiagram
     autonumber
 
-    participant Client 🖥️
-    participant API Service 🔧
-    participant Buffer 💾
-    participant Disk 📀
-    participant Cache 🗃️
-    participant Database 🗄️
+    participant Client
+    participant API Service
+    participant Buffer
+    participant Disk
+    participant Cache
+    participant Database
 
     %% Pagination
-    Client 🖥️->>+API Service 🔧: Request data (1️⃣)
-    API Service 🔧->>API Service 🔧: Perform pagination (2️⃣)
-    API Service 🔧-->>-Client 🖥️: Return paged data (3️⃣)
+    Client ->>+API Service: Request data
+    API Service ->>API Service: Perform pagination
+    API Service -->>-Client: Return paged data
 
     %% Asynchronous Logging
-    API Service 🔧->>+Buffer 💾: Log asynchronously (4️⃣)
-    Buffer 💾->>Disk 📀: Periodically flush logs (5️⃣)
+    API Service ->>+Buffer: Log asynchronously
+    Buffer ->>Disk: Periodically flush logs
 
     %% Caching
-    Client 🖥️->>+API Service 🔧: Request resource (6️⃣)
-    API Service 🔧->>Cache 🗃️: Check cache (7️⃣)
+    Client ->>+API Service: Request resource
+    API Service ->>Cache: Check cache
     alt Cache Hit
-        Cache 🗃️-->>API Service 🔧: Return cached data (8️⃣)
-        API Service 🔧-->>Client 🖥️: Return result (9️⃣)
+        Cache -->>API Service: Return cached data
+        API Service -->>Client: Return result
     else Cache Miss
-        API Service 🔧->>+Database 🗄️: Query database (🔟)
-        Database 🗄️-->>API Service 🔧: Return data (1️⃣1️⃣)
-        API Service 🔧->>Cache 🗃️: Update cache (1️⃣2️⃣)
-        API Service 🔧-->>Client 🖥️: Return result (1️⃣3️⃣)
+        API Service ->>+Database: Query database
+        Database -->>API Service: Return data
+        API Service ->>Cache: Update cache
+        API Service -->>Client: Return result
     end
 
     %% Payload Compression
-    Client 🖥️->>+API Service 🔧: Send request (1️⃣4️⃣)
-    API Service 🔧->>API Service 🔧: Compress data (1️⃣5️⃣)
-    API Service 🔧-->>Client 🖥️: Return compressed response (1️⃣6️⃣)
+    Client ->>+API Service: Send request
+    API Service ->>API Service: Compress data
+    API Service -->>Client: Return compressed response
 
     %% Connection Pool
-    API Service 🔧->>+Database 🗄️: Use pooled connection to query data (1️⃣7️⃣)
-    Database 🗄️-->>API Service 🔧: Return query result (1️⃣8️⃣)
+    API Service ->>+Database: Use pooled connection to query data
+    Database -->>API Service: Return query result
 ```
 
 ---
