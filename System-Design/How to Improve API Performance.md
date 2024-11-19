@@ -109,6 +109,7 @@ sequenceDiagram
 
 ```mermaid
 graph TD
+    subgraph Optimizations
         A[Pagination] -->|Paged data| B[API Service]
         B -->|Response| A
 
