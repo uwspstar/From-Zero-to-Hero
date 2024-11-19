@@ -103,16 +103,12 @@ sequenceDiagram
    - **Payload Compression**: Improves bandwidth efficiency.
    - **Connection Pool**: Reuses database connections to lower overhead.
 
-3. **Visual Elements**:
-   - Emojis clarify roles: 🖥️ (Client), 🔧 (API Service), 💾 (Buffer), 📀 (Disk), 🗃️ (Cache), and 🗄️ (Database).
-
 ---
 
 ### Graph Representation of Optimizations
 
 ```mermaid
 graph TD
-    subgraph Optimizations
         A[Pagination] -->|Paged data| B[API Service]
         B -->|Response| A
 
