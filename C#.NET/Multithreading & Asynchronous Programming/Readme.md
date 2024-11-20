@@ -80,7 +80,7 @@
 62. [`foreach` vs. `ForAll` in PLINQ](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/062.%20%60foreach%60%20vs.%20%60ForAll%60%20in%20PLINQ.md)
 63. [Exception Handling in PLINQ](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/063.%20Exception%20Handling%20in%20PLINQ.md)
 64. [Cancelation in PLINQ](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/064.%20Cancelation%20in%20PLINQ.md)
-65. Concurrent Collections
-66. ConcurrentQueue
-67. ConcurrentStack
-68. BlockingCollection and Producer-Consumer Scenario
+65. [Concurrent Collections](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/065.%20Concurrent%20Collections.md)
+66. [ConcurrentQueue](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/066.%20ConcurrentQueue%20in%20C%23.md)
+67. [ConcurrentStack](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/067.%20ConcurrentStack.md)
+68. [BlockingCollection and Producer-Consumer Scenario](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/068.%20BlockingCollection%20and%20Producer-Consumer%20Scenario.md)
