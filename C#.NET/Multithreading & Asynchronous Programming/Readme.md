@@ -75,11 +75,11 @@
 57. [Thread Local Storage](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/057.%20Thread%20Local%20Storage%20(TLS)%20in%20C%23.md)
 58. [Performance Considerations](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20&%20Asynchronous%20Programming/058.%20Performance%20Considerations%20in%20C%23.md)
 59. [PLINQ (Parallel LINQ)](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20&%20Asynchronous%20Programming/059.%20PLINQ%20(Parallel%20LINQ)%20in%20C%23.md)
-60. Basics of PLINQ
-61. Producer, Consumer, and Buffer in PLINQ
-62. `foreach` vs. `ForAll` in PLINQ
-63. Exception Handling in PLINQ
-64. Cancelation in PLINQ
+60. [Basics of PLINQ](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/060.%20Basics%20of%20PLINQ.md)
+61. [Producer, Consumer, and Buffer in PLINQ](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/061.%20Producer%2C%20Consumer%2C%20and%20Buffer%20in%20PLINQ.md)
+62. [`foreach` vs. `ForAll` in PLINQ](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/062.%20%60foreach%60%20vs.%20%60ForAll%60%20in%20PLINQ.md)
+63. [Exception Handling in PLINQ](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/063.%20Exception%20Handling%20in%20PLINQ.md)
+64. [Cancelation in PLINQ](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/064.%20Cancelation%20in%20PLINQ.md)
 65. Concurrent Collections
 66. ConcurrentQueue
 67. ConcurrentStack
