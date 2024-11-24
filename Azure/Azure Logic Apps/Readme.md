@@ -94,29 +94,92 @@ sequenceDiagram
 
 ---
 
-### **Detailed Flow Breakdown**:
+### Detailed Step-by-Step Explanation of the Sequence Diagram
 
-#### **Step 1: Upload Blob File**
-1. User submits a file via a form.
-2. The file is uploaded and stored in **Azure Blob Storage**.
+#### **Actors in the Sequence Diagram**
+- **User**: The person or system uploading the file.
+- **Azure Blob**: Cloud storage service where files are initially uploaded.
+- **Logic App**: Azure's workflow automation service that processes the file.
+- **Email System**: Service responsible for sending notifications.
+- **Dropbox**: External service used for storing additional copies of non-image files.
+
+---
+
+#### **Step 1: File Upload by User**
+1. **User->>Blob: Upload File (Blob)**  
+   - The user uploads a file to Azure Blob Storage.  
+   - The file could be an image, document, or any other type.  
+
+2. **Note right of Blob: File stored in Azure Blob Storage**  
+   - Once uploaded, the file is saved in Azure Blob Storage for further processing.  
+
+---
 
 #### **Step 2: Logic App Triggered**
-3. An event in Azure Blob triggers the **Logic App** workflow.
-4. The Logic App checks if the file is an image:
-   - **If the file is an image**:
-     - It is copied to the **Images folder**.
-     - All non-pink Blob copies are deleted.
-   - **If the file is not an image**:
-     - A copy is created in **Dropbox**.
-     - The Logic App determines the file type:
-       - **Zip File**: Copied to the **Zip folder**.
-       - **PDF File**: Copied to the **PDF folder**.
-       - **Other File Types**: Copied to the **Other folder**.
-     - All non-pink Blob copies are deleted.
+3. **Blob->>LogicApp: Trigger Logic App (Blob Event Triggered)**  
+   - The upload event in Azure Blob Storage automatically triggers a Logic App workflow.  
+   - This starts the process of analyzing and categorizing the uploaded file.  
 
-#### **Step 3: Data Storage and Notifications**
-5. Metadata about the file is written to an **SQL database**.
-6. A notification email is sent to the user.
+4. **LogicApp->>LogicApp: Check if File is an Image**  
+   - The Logic App checks the file type to determine whether it is an image.  
+   - This decision determines the subsequent steps.
+
+---
+
+#### **Image File Path**
+5. **LogicApp->>Blob: Copy to Folder: Images**  
+   - If the file is an image, it is copied to a designated folder named "Images" within Azure Blob Storage.  
+
+6. **LogicApp->>LogicApp: Delete Non-Pink Blob Copies**  
+   - Any redundant or unrelated blob copies in other folders are deleted to maintain storage efficiency.  
+
+---
+
+#### **Non-Image File Path**
+7. **LogicApp->>Dropbox: Create a Copy in Dropbox**  
+   - If the file is not an image, a copy of the file is created and uploaded to a Dropbox folder for backup or additional processing.
+
+8. **LogicApp->>LogicApp: Check File Type**  
+   - The Logic App analyzes the file type to determine its category (e.g., ZIP, PDF, or other formats).  
+
+9. **LogicApp->>Blob: Copy to Folder: Zip/PDF/Other**  
+   - Depending on the file type:
+     - **ZIP files**: Copied to the "Zip" folder.
+     - **PDF files**: Copied to the "PDF" folder.
+     - **Other files**: Copied to the "Other" folder within Azure Blob Storage.
+
+10. **LogicApp->>LogicApp: Delete Non-Pink Blob Copies**  
+    - Similar to the image path, redundant or unrelated blob copies are deleted.  
+
+---
+
+#### **Step 3: Final Processing**
+11. **LogicApp->>Blob: Write Metadata to SQL Database**  
+    - Metadata about the file (e.g., file name, size, upload timestamp) is written to an SQL database.  
+    - This ensures proper record-keeping and retrieval capabilities for the uploaded files.  
+
+12. **LogicApp->>Email: Send Notification Email**  
+    - A notification email is sent to the user to confirm that the file processing is complete.  
+    - This email could include details such as file type, storage location, and any processing notes.  
+
+---
+
+### **Flow Numbers Summary**
+1. User uploads a file to Azure Blob Storage.  
+2. Blob triggers the Logic App workflow.  
+3. Logic App checks if the file is an image.  
+4. If an image:
+   - Copy to "Images" folder.
+   - Delete non-pink blob copies.  
+5. If not an image:
+   - Create a copy in Dropbox.
+   - Check the file type and categorize:
+     - ZIP -> "Zip" folder.
+     - PDF -> "PDF" folder.
+     - Other -> "Other" folder.  
+   - Delete non-pink blob copies.  
+6. Write metadata to the SQL database.  
+7. Send notification email to the user.  
 
 ---
 
