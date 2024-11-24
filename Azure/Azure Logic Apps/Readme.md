@@ -180,10 +180,3 @@ sequenceDiagram
    - Delete non-pink blob copies.  
 6. Write metadata to the SQL database.  
 7. Send notification email to the user.  
-
----
-
-### **How to Use Mermaid in VSCode**:
-1. Install the **Markdown Preview Mermaid Support** plugin in VSCode.
-2. Insert the above code blocks (wrapped in ```mermaid```).
-3. Preview the diagrams directly in VSCode.
