@@ -1,5 +1,7 @@
 ### Mermaid Diagram Examples
 
+- https://www.drawio.com/blog/mermaid-diagrams
+
 In Mermaid, you can use various shapes to represent different components or nodes. Here’s a list of the basic shapes available in Mermaid and how to create them:
 
 ```mermaid
