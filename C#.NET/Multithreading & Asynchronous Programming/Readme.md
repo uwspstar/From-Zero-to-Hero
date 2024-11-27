@@ -2,7 +2,7 @@
 
 ---
 
-- [Thread Safety in C# Data Structures]()
+- [Thread Safety in C# Data Structures](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/Thread%20Safety%20in%20C%23%20Data%20Structures.md)
 - [Download 500 files using threading in C#](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/Download%20500%20files%20using%20threading%20in%20C%23.md)
 - [Environment.CurrentManagedThreadId and Thread.CurrentThread.ManagedThreadId](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/Environment.CurrentManagedThreadId%20vs%20Thread.CurrentThread.ManagedThreadId.md)
 - [Why Multithreading Causes Non-Sequential Output](https://github.com/uwspstar/From-Zero-to-Hero/blob/main/C%23.NET/Multithreading%20%26%20Asynchronous%20Programming/Why%20Multithreading%20Causes%20Non-Sequential%20Output.md)
