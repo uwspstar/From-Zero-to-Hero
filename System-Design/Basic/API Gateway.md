@@ -1,7 +1,7 @@
 ### API Gateway
 
 ```mermaid
-flowchart TD
+flowchart LR
     Client[Client: Web / Mobile / PC] -->|1 HTTP Request| API_Gateway[API Gateway]
     API_Gateway -->|2 Parameter Validation| Step2[Parameter Validation]
     Step2 -->|3 Allow/Deny List Check| Step3[Allow/Deny List]
