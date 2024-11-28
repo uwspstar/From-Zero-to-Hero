@@ -13,7 +13,7 @@ flowchart TD
     Step8 --> Microservices[Microservices]
     API_Gateway -->|9 Handle Errors| Step9[Error Handling]
     API_Gateway -->|10 Circuit Break| Step10[Circuit Break]
-    API_Gateway -->|11 Logging & Monitoring| Step11[ELK Stack (Elastic-Logstash-Kibana)]
+    API_Gateway -->|11 Logging & Monitoring| Step11[ELK Stack Elastic-Logstash-Kibana]
     API_Gateway -->|12 Cache Data| Step12[Redis Cache]
 ```
 
