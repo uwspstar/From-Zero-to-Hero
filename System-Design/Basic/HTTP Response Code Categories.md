@@ -12,6 +12,18 @@ HTTP response codes are divided into **five categories**, each indicating the na
 | Client Error        | 400-499    | The request contains an error from the client side. | 400 (Bad Request), 404 (Not Found)        |
 | Server Error        | 500-599    | The server failed to process a valid request. | 500 (Internal Server Error), 503 (Service Unavailable) |
 
+
+### **Tips for Understanding HTTP Status Codes**
+1. **First Digit**: The first digit of the status code indicates the category.
+   - 1xx: Informational
+   - 2xx: Success
+   - 3xx: Redirection
+   - 4xx: Client Error
+   - 5xx: Server Error
+2. **Common Codes**: Familiarize yourself with frequently encountered codes (e.g., 200, 404, 500).
+3. **Debugging**: Use response codes to identify the source of issues in client-server interactions.
+4. **API Design**: When designing APIs, use appropriate status codes to make your API more intuitive and robust.
+
 ---
 
 ### **1. Informational Responses (100-199)**
@@ -56,18 +68,3 @@ HTTP response codes are divided into **five categories**, each indicating the na
   - **500 Internal Server Error**: The server encountered an unexpected condition.
   - **502 Bad Gateway**: The server received an invalid response from an upstream server.
   - **503 Service Unavailable**: The server is temporarily unable to handle the request due to maintenance or overload.
-
----
-
-### **Tips for Understanding HTTP Status Codes**
-1. **First Digit**: The first digit of the status code indicates the category.
-   - 1xx: Informational
-   - 2xx: Success
-   - 3xx: Redirection
-   - 4xx: Client Error
-   - 5xx: Server Error
-2. **Common Codes**: Familiarize yourself with frequently encountered codes (e.g., 200, 404, 500).
-3. **Debugging**: Use response codes to identify the source of issues in client-server interactions.
-4. **API Design**: When designing APIs, use appropriate status codes to make your API more intuitive and robust.
-
-Let me know if you'd like a detailed example or more explanation!
