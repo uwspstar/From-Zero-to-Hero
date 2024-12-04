@@ -1,3 +1,5 @@
+### How to distinguish between Blazor WebAssembly and Blazor Server project
+
 To distinguish between a **Blazor WebAssembly** project and a **Blazor Server** project, you can look at several key differences in the project structure, files, and configurations.
 
 ---
