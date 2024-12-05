@@ -1,3 +1,8 @@
+- https://community.sap.com/t5/technology-q-a/refused-to-display-quot-https-quot-in-a-frame-because-it-set-x-frame/qaq-p/12148629?utm_source=chatgpt.com
+- https://community.sap.com/t5/crm-and-cx-q-a/i-m-trying-to-set-x-frame-options-to-allow-from-uri-no-success-through-hac/qaq-p/12086510?utm_source=chatgpt.com
+
+
+
 ### Embedding SAP BusinessObjects BI reports within an iframe in your Blazor application can be challenging due to security measures like the `X-Frame-Options` header, which prevents embedding to protect against clickjacking attacks. This header, when set to `DENY` or `SAMEORIGIN`, restricts the page from being displayed in an iframe on different domains. 
 
 **Understanding the Issue:**
