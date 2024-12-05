@@ -67,7 +67,7 @@ You need to programmatically log in to the BI Report server and reuse the sessio
                };
 
                var loginResponse = await _httpClient.PostAsync(
-                   "https://bireport-dev/BOE/BI/login",
+                   "https://bireport/login",
                    new FormUrlEncodedContent(loginData)
                );
                loginResponse.EnsureSuccessStatusCode();
@@ -78,8 +78,8 @@ You need to programmatically log in to the BI Report server and reuse the sessio
 
                // Step 3: Rewrite relative URLs if needed
                var content = await response.Content.ReadAsStringAsync();
-               content = content.Replace("src=\"/BOE/", "src=\"https://bireport-dev/BOE/");
-               content = content.Replace("href=\"/BOE/", "href=\"https://bireport-dev/BOE/");
+               content = content.Replace("src=\"/abc/", "src=\"https://bireport/abc/");
+               content = content.Replace("href=\"/abc/", "href=\"https://bireport/abc/");
 
                return Content(content, response.Content.Headers.ContentType?.ToString());
            }
@@ -97,7 +97,7 @@ You need to programmatically log in to the BI Report server and reuse the sessio
 
 1. Test the proxy with your credentials:
    ```plaintext
-   http://localhost:5058/api/proxy/fetch?url=https://bireport-dev/BOE/BI
+   http://localhost:5058/api/proxy/fetch?url=https://bireport
    ```
 2. If the content still redirects to `logon.jsp`:
    - Check if the login response contains cookies (`JSESSIONID`) and verify if they are reused in subsequent requests.
@@ -114,7 +114,7 @@ var handler = new HttpClientHandler
     UseCookies = true,
     CookieContainer = new CookieContainer()
 };
-handler.CookieContainer.Add(new Uri("https://bireport-dev"), new Cookie("JSESSIONID", "your-session-id"));
+handler.CookieContainer.Add(new Uri("https://bireport"), new Cookie("JSESSIONID", "your-session-id"));
 
 var client = new HttpClient(handler);
 ```
