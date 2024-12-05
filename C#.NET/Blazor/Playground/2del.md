@@ -1,3 +1,205 @@
+The issue you’re experiencing likely involves **Single Sign-On (SSO)** or other authentication mechanisms that are required to access the SSRS (SQL Server Reporting Services) reports. The error message `Response status code does not indicate success: 404 (unauthorized)` suggests that the proxy cannot authenticate with the SSRS server.
+
+Here’s how to diagnose and solve the problem:
+
+---
+
+### **1. Understanding the Problem**
+
+- **SSO Mechanism**: 
+  The SSRS server may use SSO (e.g., Windows Authentication or Kerberos), which authenticates the user via the VPN or their Active Directory (AD) credentials. When you try to access the reports through the proxy, it cannot automatically use your credentials, leading to an unauthorized error.
+
+- **Proxy Issue**: 
+  The proxy sends a request to `https://ssrs/reports` without proper authentication headers or cookies, so the server returns `404 Unauthorized`.
+
+---
+
+### **2. Solution Steps**
+
+#### **Step 1: Use Windows Authentication in Proxy**
+
+Since SSRS is likely using Windows Authentication (part of SSO), you can configure your reverse proxy to forward the Windows credentials to the SSRS server.
+
+1. Modify the `HttpClientHandler` to use default credentials:
+   ```csharp
+   var handler = new HttpClientHandler
+   {
+       UseDefaultCredentials = true, // Use Windows credentials for SSO
+       AllowAutoRedirect = true
+   };
+
+   var client = new HttpClient(handler);
+   ```
+
+2. Update the `ProxyController` to use this handler:
+   ```csharp
+   [ApiController]
+   [Route("api/[controller]")]
+   public class ProxyController : ControllerBase
+   {
+       [HttpGet("fetch")]
+       public async Task<IActionResult> Fetch([FromQuery] string url)
+       {
+           if (string.IsNullOrEmpty(url))
+               return BadRequest("URL is required.");
+
+           try
+           {
+               var handler = new HttpClientHandler
+               {
+                   UseDefaultCredentials = true, // Use Windows Authentication
+                   AllowAutoRedirect = true
+               };
+
+               var client = new HttpClient(handler);
+
+               var response = await client.GetAsync(url);
+               response.EnsureSuccessStatusCode();
+
+               var content = await response.Content.ReadAsStringAsync();
+               return Content(content, response.Content.Headers.ContentType?.ToString());
+           }
+           catch (HttpRequestException ex)
+           {
+               return BadRequest($"Error fetching the URL: {ex.Message}");
+           }
+       }
+   }
+   ```
+
+---
+
+#### **Step 2: Ensure VPN Access**
+
+The SSRS server requires VPN access. Ensure that:
+1. The machine hosting your proxy server is connected to the VPN.
+2. The proxy server can resolve and access `https://ssrs/reports`.
+
+You can test this by running:
+```bash
+ping ssrs
+curl -v https://ssrs/reports
+```
+
+---
+
+#### **Step 3: Debug the Authentication Flow**
+
+1. Open your browser’s **Developer Tools (F12)** → **Network Tab**.
+2. Access `https://ssrs/reports` while connected to the VPN.
+3. Look for:
+   - Authentication headers (e.g., `Authorization: Negotiate`, `Authorization: NTLM`).
+   - Cookies set by the SSRS server after authentication.
+
+---
+
+#### **Step 4: Forward Cookies or Headers**
+
+If SSO relies on cookies or custom headers:
+1. Retrieve the required cookies after logging in via a browser.
+2. Forward the cookies with the proxy request:
+   ```csharp
+   var handler = new HttpClientHandler
+   {
+       UseCookies = true,
+       CookieContainer = new CookieContainer()
+   };
+
+   handler.CookieContainer.Add(new Uri("https://ssrs"), new Cookie("sessionid", "your-session-id"));
+   var client = new HttpClient(handler);
+   ```
+
+---
+
+#### **Step 5: Handle Token-Based Authentication**
+
+If SSRS uses token-based authentication (e.g., OAuth or JWT):
+1. Authenticate manually using a POST request to the login endpoint.
+2. Pass the token in the `Authorization` header:
+   ```csharp
+   client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "your-access-token");
+   ```
+
+---
+
+#### **Step 6: Test the Reverse Proxy**
+
+1. Access the proxy URL:
+   ```plaintext
+   http://localhost:5058/api/proxy/fetch?url=https://ssrs/reports
+   ```
+2. Verify that the SSRS reports load without authentication errors.
+
+---
+
+### **3. Debugging Tips**
+
+- **Check Logs**:
+  - Examine server logs to identify if the requests are being blocked or redirected.
+
+- **Simulate Requests**:
+  - Use tools like `Postman` or `curl` to simulate requests to `https://ssrs/reports` and debug the authentication flow.
+
+- **Monitor Authentication Flow**:
+  - Use a browser to log in to SSRS, and inspect the network requests to see what headers or cookies are used.
+
+---
+
+### **4. Example Updated ProxyController**
+
+Here’s a complete implementation that handles Windows Authentication:
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class ProxyController : ControllerBase
+{
+    [HttpGet("fetch")]
+    public async Task<IActionResult> Fetch([FromQuery] string url)
+    {
+        if (string.IsNullOrEmpty(url))
+            return BadRequest("URL is required.");
+
+        try
+        {
+            var handler = new HttpClientHandler
+            {
+                UseDefaultCredentials = true, // Enable Windows Authentication
+                AllowAutoRedirect = true
+            };
+
+            var client = new HttpClient(handler);
+
+            var response = await client.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+
+            var content = await response.Content.ReadAsStringAsync();
+            return Content(content, response.Content.Headers.ContentType?.ToString());
+        }
+        catch (HttpRequestException ex)
+        {
+            return BadRequest($"Error fetching the URL: {ex.Message}");
+        }
+    }
+}
+```
+
+---
+
+### **5. Summary of Steps**
+
+| **Issue**                        | **Solution**                                                                                     |
+|-----------------------------------|-----------------------------------------------------------------------------------------------|
+| Windows Authentication (SSO)     | Use `HttpClientHandler.UseDefaultCredentials = true` to forward Windows credentials.           |
+| Cookies or Tokens Required        | Retrieve cookies or tokens from the browser and forward them in proxy requests.               |
+| VPN Access                        | Ensure the proxy server is connected to the VPN and can resolve/access `https://ssrs/reports`. |
+| Authentication Debugging          | Use browser Developer Tools or tools like Postman to debug headers, cookies, and redirects.    |
+
+With these steps, your reverse proxy should successfully authenticate with the SSRS server and display the reports in your Blazor app. Let me know if you need further help!
+
+
+---
+
 - https://community.sap.com/t5/technology-q-a/refused-to-display-quot-https-quot-in-a-frame-because-it-set-x-frame/qaq-p/12148629?utm_source=chatgpt.com
 - https://community.sap.com/t5/crm-and-cx-q-a/i-m-trying-to-set-x-frame-options-to-allow-from-uri-no-success-through-hac/qaq-p/12086510?utm_source=chatgpt.com
 
