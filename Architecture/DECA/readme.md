@@ -1,4 +1,4 @@
-以下使用经典的5Ws 模型（Who、What、When、Where、Why）详细阐述 **DECA（Dynamic Event Condition Action）模型**：
+# **DECA（Dynamic Event Condition Action）模型**：
 
 ---
 
