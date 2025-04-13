@@ -50,6 +50,7 @@ ClaimSystem/
 │   └── Program.cs
 ├── ClaimSystem.Core/
 │   ├── Models/
+|   ├── Data/
 │   ├── Interfaces/
 │   ├── Services/
 │   └── Extensions/
