@@ -15,7 +15,7 @@ dotnet new sln -n ClaimSystem
 
 # Create projects
 dotnet new webapi -n ClaimSystem.API
-dotnet new blazorserver -n ClaimSystem.Web --auth Individual
+dotnet new blazor -n ClaimSystem.Web --auth Individual
 dotnet new classlib -n ClaimSystem.Core
 
 # Add projects to solution
