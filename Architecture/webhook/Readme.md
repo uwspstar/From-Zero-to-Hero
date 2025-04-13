@@ -1,4 +1,4 @@
-Here's the Mermaid sequence diagram with auto-numbering based on the provided content:
+
 
 ```mermaid
 sequenceDiagram
