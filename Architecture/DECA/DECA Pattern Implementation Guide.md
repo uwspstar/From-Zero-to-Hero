@@ -4,6 +4,9 @@ Here's a step-by-step guide to implement the DECA pattern in .NET Core using VS 
 
 ## Project Setup in VS Code
 
+NOTE :
+-  may need run `dotnet new install Microsoft.DotNet.Web.ProjectTemplates.8.0 --force`
+
 ### 1. Create Solution & Projects
 
 ```bash
