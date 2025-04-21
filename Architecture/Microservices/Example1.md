@@ -33,8 +33,8 @@ flowchart LR
 
     subgraph Infra[Infrastructure]
         CACHE[Distributed Cache]
-        LOG[Logging (Seq)]
-        OBS[Observability (Jaeger)]
+        LOG[Logging Seq]
+        OBS[Observability Jaeger]
     end
 
     subgraph MQ[Message Broker]
