@@ -1,4 +1,4 @@
-以下是使用 Mermaid 语法表示你上传的系统架构图内容的版本：
+以下系统架构图：
 
 ```mermaid
 flowchart LR
