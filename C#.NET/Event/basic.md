@@ -155,4 +155,77 @@ This gives you more power but loses the safety and protection `event` provides.
 
 ---
 
-Would you like a **Mermaid sequence diagram** or **memory structure illustration** showing how .NET event flow works from publisher to subscriber?
+Great! Below is a detailed breakdown:
+
+---
+
+## ✅ .NET Event Flow — Mermaid Sequence Diagram
+
+This illustrates the **publisher-subscriber** flow of a .NET event using Mermaid syntax:
+
+### 🧭 Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant Publisher
+    participant Subscriber1
+    participant Subscriber2
+
+    Publisher->>+Publisher: Define event (event EventHandler MyEvent)
+    Subscriber1->>+Publisher: Subscribe (+= Handler1)
+    Subscriber2->>+Publisher: Subscribe (+= Handler2)
+    
+    Publisher->>Publisher: Some action triggers the event
+    Publisher-->>Subscriber1: Invoke Handler1(this, args)
+    Subscriber1-->>Publisher: Handler1 executed
+    Publisher-->>Subscriber2: Invoke Handler2(this, args)
+    Subscriber2-->>Publisher: Handler2 executed
+```
+
+You can paste this into a Mermaid live editor (like [Mermaid Live Editor](https://mermaid.live)) or tools like VS Code + Markdown Preview Mermaid Support.
+
+---
+
+## 🧠 .NET Event Memory Structure (Simplified)
+
+Let's break this down in a diagram-like explanation using text.
+
+### Memory View (Heap + Delegate Chain)
+
+```
++--------------------+           +------------------+
+|     Publisher      |           |   Subscriber 1   |
+|--------------------|           |------------------|
+| + MyEvent (field)  |------->   | + Handler1()     |
+|                    |           +------------------+
+|                    |
+|                    |           +------------------+
+|                    |           |   Subscriber 2   |
+|                    |---------->| + Handler2()     |
++--------------------+           +------------------+
+```
+
+### Explanation:
+
+* `MyEvent` is a **delegate field** behind the `event` keyword.
+* It stores a **multicast delegate chain** (an internal invocation list).
+* Each subscriber registers a method, and their reference is **added to the delegate chain**.
+* When the event is triggered, the multicast delegate calls each method **in order**.
+
+---
+
+## 📌 Bonus: Internal .NET Multicast Delegate
+
+Under the hood, the event delegate uses an **Invocation List**:
+
+```csharp
+Delegate[] invocationList = myEvent.GetInvocationList();
+
+foreach (var handler in invocationList)
+{
+    handler.DynamicInvoke(sender, args);
+}
+```
+
+This is how .NET handles multiple subscribers to a single event.
+
