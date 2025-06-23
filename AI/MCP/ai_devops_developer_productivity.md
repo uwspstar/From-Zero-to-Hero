@@ -10,7 +10,7 @@
 
 构建一个 **AI 驱动的多功能开发者调试服务（MCP Server）**，通过自然语言查询方式（如 ChatGPT、Cursor、Copilot 接口）完成如下操作：
 
-* 查询指定日志（例如：`velocity qa xact inbound log`）
+* 查询指定日志（例如：` qa inbound log`）
 * 查询数据库数据（例如：某个 Claim 的 UAT VEI 数据）
 * 访问文件共享（通过 Active Directory 或类似权限控制）
 * 集成到 Cursor 等支持 AI 的 IDE，开发者只需“对话”，不需切换上下文
@@ -55,10 +55,10 @@
 
 | 场景     | 示例                                                                      |
 | ------ | ----------------------------------------------------------------------- |
-| 日志快速排查 | “Show me the last 20 errors from XACT inbound in velocity QA”           |
-| 数据问题验证 | “Fetch claim VEI XML payload for claim #12345 in UAT”                   |
+| 日志快速排查 | “Show me the last 20 errors from inbound in QA”           |
+| 数据问题验证 | “Fetch claim XML payload for claim #12345 in UAT”                   |
 | 配置检查   | “What is the current environment variable setting for service X in QA?” |
-| 文件下载   | “Give me the latest log file from \corp\velocityqa\xact\logs”           |
+| 文件下载   | “Give me the latest log file from \corp\logs”           |
 
 ---
 
@@ -98,7 +98,7 @@ flowchart TD
     B --> C3[文件共享模块]
     B --> D[权限控制 & 身份验证]
 
-    C1 --> L1[解析 Velocity QA 日志]
+    C1 --> L1[解析 QA 日志]
     C2 --> DB[(UAT / QA 数据库)]
     C3 --> FS[AD 文件共享路径]
 
@@ -111,7 +111,7 @@ flowchart TD
 
 * 所有用户请求由 FastAPI 接收并分发给子模块
 * 权限模块负责验证用户身份并控制访问资源（日志、数据库、文件）
-* 支持多环境资源调用（UAT、QA、Velocity等）
+* 支持多环境资源调用（UAT、QA 等）
 
 ---
 
@@ -204,7 +204,3 @@ def read_file(path: str, user: str = Depends(get_current_user)):
 * 添加数据库实时连接查询
 * 调用 ChatGPT 自动分析日志行并返回摘要
 * 添加更复杂的日志/文件路径配置（如 `YAML + 多环境切换支持`）
-
-可以继续迭代。如果你已经用 Cursor 初始化了项目，我也可以帮你 refactor 成完整架构。
-
-要不要我生成一个 GitHub-ready 项目模板给你？📦
